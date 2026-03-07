@@ -22,11 +22,9 @@ import CertsWidget from '../components/CertsWidget.astro'
         <div class="space-y-8 mb-8" data-animate>
           <AchievementsWidget />
         </div>
-        <div class="grid grid-cols-1 gap-8 mb-8" data-animate>
-          <AboutWidget />
-        </div>
-        <div id="portfolio" class="space-y-8 mb-8" data-animate>
-          <ProjectsWidget />
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8" data-animate>
+          <div id="about"><AboutWidget /></div>
+          <div id="portfolio"><ProjectsWidget /></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8" data-animate>
           <CertsWidget />

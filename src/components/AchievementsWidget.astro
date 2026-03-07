@@ -7,19 +7,19 @@ interface Achievement {
 
 const achievements: Achievement[] = [
   {
-    icon: "🚀",
-    number: "50+",
+    icon: "",
+    number: "12+",
     label: "Projects Complete"
   },
   {
-    icon: "👥",
-    number: "30+",
-    label: "Happy Clients"
+    icon: "",
+    number: "60+",
+    label: "Labor Hours Saved"
   },
   {
-    icon: "⭐",
-    number: "100+",
-    label: "GitHub Stars"
+    icon: "",
+    number: "7+",
+    label: "Certifications Complete"
   }
 ];
 ---
@@ -28,7 +28,6 @@ const achievements: Achievement[] = [
   <div class="grid grid-cols-3 gap-8">
     {achievements.map((achievement) => (
       <div class="text-center">
-        <span class="text-3xl mb-2 block">{achievement.icon}</span>
         <p class="text-4xl font-bold mb-1">{achievement.number}</p>
         <p class="text-blue-100 text-sm">{achievement.label}</p>
       </div>

@@ -28,6 +28,26 @@ const {
   </body>
 </html>
 
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  document.querySelectorAll('[data-animate]').forEach((el) => {
+    gsap.from(el, {
+      scrollTrigger: {
+        trigger: el,
+        start: 'top 88%',
+      },
+      y: 40,
+      opacity: 0,
+      duration: 0.7,
+      ease: 'power2.out',
+    });
+  });
+</script>
+
 <style is:global>
   :root {
     --accent: rgb(0, 122, 255);

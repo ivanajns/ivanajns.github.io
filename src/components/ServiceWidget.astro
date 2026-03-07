@@ -10,6 +10,7 @@ interface Service {
 interface Award {
   degree: string;
   school: string;
+  schoolUrl: string;
   period: string;
   achievements: string[];
 }
@@ -48,6 +49,7 @@ const awards: Award[] = [
   {
     degree: "Next Tech Award",
     school: "North Carolina Technology Association",
+    schoolUrl: "https://www.nctech.org/events/Awards/next-tech-awards-winners-2025.html",
     period: "2025",
     achievements: [
       "I'm honored that I was selected as a Next Tech Award winner by the North Carolina Technology Association in partnership with Business North Carolina. The award recognizes rising tech talent making meaningful contributions to their organizations and communities across the state."
@@ -56,6 +58,7 @@ const awards: Award[] = [
   {
     degree: "Black Women in Tech Feature",
     school: "Global Tech Advocates",
+    schoolUrl: "https://theblackwomenintech.com/the-voices-in-the-shadow-project-2/",
     period: "",
     achievements: [
       "I was selected to share my unconventional story and lessons learned in a feature by Global Tech Advocate's Black Women in Tech, a not-for-profit network that aims to support Black women in technology and help companies perform better through diversity and inclusion."
@@ -64,6 +67,7 @@ const awards: Award[] = [
   {
     degree: "Top 30 Under 30 Future Leaders of Charlotte Award",
     school: "Elevate Lifestyle",
+    schoolUrl: "https://www.newsbreak.com/event/68ba7c7a0ce011ae46e1d483-top-30-under-30-future-leaders-of-charlotte-class-of-2025",
     period: "2025",
     achievements: [
       "I'm honored to be named among Charlotte's Top 30 Under 30 Class of 2025, an award that celebrates young professionals making a meaningful impact in leadership and the community. Being recognized among people who uplift our community is truly inspiring."
@@ -80,13 +84,13 @@ const awards: Award[] = [
       <img
         src="/img/service-1.jpg"
         alt="Service photo 1"
-        class="w-full h-[30rem] object-cover rounded-2xl bg-apple-gray-100"
+        class="w-full h-[30rem] object-cover object-center rounded-2xl bg-apple-gray-100"
         onerror="this.style.background='#e5e7eb'; this.style.display='block'"
       />
       <img
         src="/img/service-2.jpg"
         alt="Service photo 2"
-        class="w-full h-[30rem] object-cover rounded-2xl bg-apple-gray-100"
+        class="w-full h-[30rem] object-cover object-left rounded-2xl bg-apple-gray-100"
         onerror="this.style.background='#e5e7eb'; this.style.display='block'"
       />
     </div>
@@ -123,13 +127,13 @@ const awards: Award[] = [
       <img
         src="/img/awards-1.jpg"
         alt="Awards photo 1"
-        class="w-full h-[30rem] object-cover rounded-2xl bg-apple-gray-100"
+        class="w-full h-[30rem] object-cover object-center rounded-2xl bg-apple-gray-100"
         onerror="this.style.background='#e5e7eb'; this.style.display='block'"
       />
       <img
         src="/img/awards-2.jpg"
         alt="Awards photo 2"
-        class="w-full h-[30rem] object-cover rounded-2xl bg-apple-gray-100"
+        class="w-full h-[30rem] object-cover object-right rounded-2xl bg-apple-gray-100"
         onerror="this.style.background='#e5e7eb'; this.style.display='block'"
       />
     </div>
@@ -139,7 +143,9 @@ const awards: Award[] = [
           <div class="flex flex-col sm:flex-row justify-between items-start gap-2 mb-4">
             <div>
               <h4 class="text-xl font-medium text-apple-gray-500">{award.degree}</h4>
-              <p class="text-apple-gray-400">{award.school}</p>
+              <a href={award.schoolUrl} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition-colors">
+                {award.school}
+              </a>
             </div>
           </div>
           <div class="text-apple-gray-400 space-y-1">

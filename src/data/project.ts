@@ -11,7 +11,7 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Full-Stack On-prem Solution",
+    title: "Full-Stack On-Prem Solution",
     description: "The Project Management Power App automates the project intake, management, and review process for the projects teams. It replaces manual processes and disconnected tools with a unified solution that features a refresh of the Power BI dashboard upon data changes, notifications to stakeholders when a project is updated or approved, and a built-in Copilot Virtual Agent for users to get instant answers. This enhances accuracy, timeliness, and communication, significantly improving project management efficiency.",
     image: "/img/portfolio/mpapp.png",
     tags: ["Power Apps", "Power Automate", "SharePoint", "Copilot Virtual Agent"],

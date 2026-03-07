@@ -217,6 +217,10 @@ const awards: Award[] = [
     return { modal, modalImg, closeModal };
   }
 
+  // Escape GSAP transform stacking context — same fix as React createPortal
+  document.body.appendChild(document.getElementById('service-modal')!);
+  document.body.appendChild(document.getElementById('awards-modal')!);
+
   const { modal: serviceModal, modalImg: serviceImg } = setupModal('service-modal');
   const { modal: awardsModal, modalImg: awardsImg } = setupModal('awards-modal');
 

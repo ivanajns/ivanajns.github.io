@@ -105,22 +105,22 @@ const awards: Award[] = [
       ))}
       </div>
       <div class="hidden md:flex flex-col gap-4 w-80 flex-shrink-0 self-stretch">
-        <a href="https://ivanajns.github.io/img/service-1.jpg" target="_blank" rel="noopener noreferrer" class="flex-1 min-h-0">
+        <button data-modal-img="/img/service-1.jpg" class="flex-1 min-h-0 cursor-pointer">
           <img
             src="/img/service-1.jpg"
             alt="Leadership & Service photo 1"
-            class="w-full h-full object-cover object-center rounded-2xl bg-apple-gray-100"
+            class="w-full h-full object-cover object-center rounded-2xl bg-apple-gray-100 hover:opacity-90 transition-opacity"
             onerror="this.style.background='#e5e7eb'"
           />
-        </a>
-        <a href="https://ivanajns.github.io/img/service-2.jpg" target="_blank" rel="noopener noreferrer" class="flex-1 min-h-0">
+        </button>
+        <button data-modal-img="/img/service-2.jpg" class="flex-1 min-h-0 cursor-pointer">
           <img
             src="/img/service-2.jpg"
             alt="Leadership & Service photo 2"
-            class="w-full h-full object-cover object-right rounded-2xl bg-apple-gray-100"
+            class="w-full h-full object-cover object-right rounded-2xl bg-apple-gray-100 hover:opacity-90 transition-opacity"
             onerror="this.style.background='#e5e7eb'"
           />
-        </a>
+        </button>
       </div>
     </div>
   </div>
@@ -148,23 +148,71 @@ const awards: Award[] = [
       ))}
       </div>
       <div class="hidden md:flex flex-col gap-4 w-80 flex-shrink-0 self-stretch">
-        <a href="https://ivanajns.github.io/img/awards-1.jpg" target="_blank" rel="noopener noreferrer" class="flex-1 min-h-0">
+        <button data-modal-img="/img/awards-1.jpg" class="flex-1 min-h-0 cursor-pointer">
           <img
             src="/img/awards-1.jpg"
             alt="Honors & Awards photo 1"
-            class="w-full h-full object-cover object-center rounded-2xl bg-apple-gray-100"
+            class="w-full h-full object-cover object-center rounded-2xl bg-apple-gray-100 hover:opacity-90 transition-opacity"
             onerror="this.style.background='#e5e7eb'"
           />
-        </a>
-        <a href="https://ivanajns.github.io/img/awards-2.jpg" target="_blank" rel="noopener noreferrer" class="flex-1 min-h-0">
+        </button>
+        <button data-modal-img="/img/awards-2.jpg" class="flex-1 min-h-0 cursor-pointer">
           <img
             src="/img/awards-2.jpg"
             alt="Honors & Awards photo 2"
-            class="w-full h-full object-cover object-left rounded-2xl bg-apple-gray-100"
+            class="w-full h-full object-cover object-left rounded-2xl bg-apple-gray-100 hover:opacity-90 transition-opacity"
             onerror="this.style.background='#e5e7eb'"
           />
-        </a>
+        </button>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Image modal -->
+<div id="img-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+  <div id="img-modal-backdrop" class="absolute inset-0 bg-black/70 backdrop-blur-sm"></div>
+  <div class="relative z-10 max-w-4xl w-full">
+    <button id="img-modal-close" class="absolute -top-10 right-0 w-8 h-8 flex items-center justify-center text-white hover:text-gray-300 transition-colors" aria-label="Close">
+      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width={2} stroke="currentColor" class="w-6 h-6">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <img id="img-modal-img" src="" alt="" class="w-full max-h-[85vh] object-contain rounded-2xl shadow-2xl" />
+  </div>
+</div>
+
+<script>
+  const modal = document.getElementById('img-modal')!;
+  const modalImg = document.getElementById('img-modal-img') as HTMLImageElement;
+  const backdrop = document.getElementById('img-modal-backdrop')!;
+  const closeBtn = document.getElementById('img-modal-close')!;
+
+  function openModal(src: string, alt: string) {
+    modalImg.src = src;
+    modalImg.alt = alt;
+    modal.classList.remove('hidden');
+    modal.classList.add('flex');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeModal() {
+    modal.classList.add('hidden');
+    modal.classList.remove('flex');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll<HTMLButtonElement>('[data-modal-img]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      const src = btn.dataset.modalImg!;
+      const alt = btn.querySelector('img')?.alt || '';
+      openModal(src, alt);
+    });
+  });
+
+  backdrop.addEventListener('click', closeModal);
+  closeBtn.addEventListener('click', closeModal);
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') closeModal();
+  });
+</script>

@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import type { Project } from '../types/project';
 
 interface Props {
@@ -71,8 +72,8 @@ export default function ProjectsGrid({ projects }: Props) {
         ))}
       </div>
 
-      {/* Modal overlay */}
-      {activeProject && (
+      {/* Modal overlay — rendered via portal to escape any parent stacking context */}
+      {activeProject && createPortal(
         <div
           className="fixed inset-0 z-50 flex items-center justify-center p-4"
           onClick={() => setActiveProject(null)}
@@ -170,7 +171,8 @@ export default function ProjectsGrid({ projects }: Props) {
               )}
             </div>
           </div>
-        </div>
+        </div>,
+        document.body
       )}
     </>
   );

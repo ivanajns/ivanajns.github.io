@@ -24,12 +24,12 @@ const achievements: Achievement[] = [
 ];
 ---
 
-<div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-3xl p-8 shadow-xl text-white">
-  <div class="grid grid-cols-3 gap-8">
+<div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-4 shadow-sm text-white">
+  <div class="grid grid-cols-3 gap-4">
     {achievements.map((achievement) => (
       <div class="text-center">
-        <p class="text-4xl font-bold mb-1">{achievement.number}</p>
-        <p class="text-blue-100 text-sm">{achievement.label}</p>
+        <p class="text-2xl font-bold mb-0.5">{achievement.number}</p>
+        <p class="text-blue-100 text-xs">{achievement.label}</p>
       </div>
     ))}
   </div>

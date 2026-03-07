@@ -70,7 +70,7 @@ const awards: Award[] = [
 
 <div class="space-y-8">
   <div id="leadership" class="bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl">
-    <h3 class="text-2xl font-semibold mb-4">Service</h3>
+    <h3 class="text-2xl font-semibold mb-4">Leadership & Service</h3>
     <!-- Service Photos -->
     <div class="grid grid-cols-2 gap-4 mb-6">
       <img
@@ -100,18 +100,18 @@ const awards: Award[] = [
               </span>
             )}
           </div>
-          <ul class="list-disc list-inside text-apple-gray-400 mb-3 space-y-1">
+          <div class="text-apple-gray-400 mb-3 space-y-1">
             {service.description.map((item) => (
-              <li>{item}</li>
+              <p>{item}</p>
             ))}
-          </ul>
+          </div>
         </div>
       ))}
     </div>
   </div>
 
   <div id="awards" class="bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl">
-    <h3 class="text-2xl font-semibold mb-4">Awards</h3>
+    <h3 class="text-2xl font-semibold mb-4">Honors & Awards</h3>
     <!-- Awards Photos -->
     <div class="grid grid-cols-2 gap-4 mb-6">
       <img
@@ -135,17 +135,12 @@ const awards: Award[] = [
               <h4 class="text-xl font-medium text-apple-gray-500">{award.degree}</h4>
               <p class="text-apple-gray-400">{award.school}</p>
             </div>
-            {award.period && (
-              <span class="text-sm text-apple-gray-300 bg-apple-gray-100 px-3 py-1 rounded-full whitespace-nowrap">
-                {award.period}
-              </span>
-            )}
           </div>
-          <ul class="list-disc list-inside text-apple-gray-400 space-y-1">
+          <div class="text-apple-gray-400 space-y-1">
             {award.achievements.map((achievement) => (
-              <li>{achievement}</li>
+              <p>{achievement}</p>
             ))}
-          </ul>
+          </div>
         </div>
       ))}
     </div>

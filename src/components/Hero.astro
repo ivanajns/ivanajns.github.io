@@ -1,0 +1,111 @@
+---
+---
+
+<!-- Fixed top navigation bar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 backdrop-blur-lg border-b border-apple-gray-100 shadow-sm">
+  <div class="container mx-auto px-4 max-w-6xl flex items-center justify-between h-14">
+    <a href="#page-top" class="font-semibold text-apple-gray-500 hover:text-blue-600 transition-colors">
+      Ivana Jones
+    </a>
+
+    <!-- Desktop links -->
+    <ul class="hidden md:flex gap-6 list-none m-0 p-0">
+      <li><a href="#about" class="text-sm text-apple-gray-400 hover:text-blue-600 transition-colors">About</a></li>
+      <li><a href="#portfolio" class="text-sm text-apple-gray-400 hover:text-blue-600 transition-colors">Portfolio</a></li>
+      <li><a href="#leadership" class="text-sm text-apple-gray-400 hover:text-blue-600 transition-colors">Leadership</a></li>
+      <li><a href="#awards" class="text-sm text-apple-gray-400 hover:text-blue-600 transition-colors">Awards</a></li>
+    </ul>
+
+    <!-- Hamburger button (mobile only) -->
+    <button
+      id="nav-toggle"
+      class="md:hidden flex flex-col justify-center items-center w-8 h-8 gap-1.5 focus:outline-none"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      <span class="hamburger-line block w-6 h-0.5 bg-apple-gray-500 transition-all duration-300"></span>
+      <span class="hamburger-line block w-6 h-0.5 bg-apple-gray-500 transition-all duration-300"></span>
+      <span class="hamburger-line block w-6 h-0.5 bg-apple-gray-500 transition-all duration-300"></span>
+    </button>
+  </div>
+
+  <!-- Mobile dropdown menu -->
+  <div
+    id="mobile-menu"
+    class="md:hidden hidden bg-white/95 backdrop-blur-lg border-t border-apple-gray-100 px-4 py-3"
+  >
+    <ul class="flex flex-col gap-1 list-none m-0 p-0">
+      <li><a href="#about" class="mobile-nav-link block py-2.5 text-sm text-apple-gray-400 hover:text-blue-600 transition-colors">About</a></li>
+      <li><a href="#portfolio" class="mobile-nav-link block py-2.5 text-sm text-apple-gray-400 hover:text-blue-600 transition-colors">Portfolio</a></li>
+      <li><a href="#leadership" class="mobile-nav-link block py-2.5 text-sm text-apple-gray-400 hover:text-blue-600 transition-colors">Leadership</a></li>
+      <li><a href="#awards" class="mobile-nav-link block py-2.5 text-sm text-apple-gray-400 hover:text-blue-600 transition-colors">Awards</a></li>
+    </ul>
+  </div>
+</nav>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const menu = document.getElementById('mobile-menu');
+  const lines = document.querySelectorAll('.hamburger-line');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = !menu?.classList.contains('hidden');
+
+    // Toggle menu visibility
+    menu?.classList.toggle('hidden');
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+
+    // Animate hamburger → X
+    if (!isOpen) {
+      lines[0]?.classList.add('translate-y-2', 'rotate-45');
+      lines[1]?.classList.add('opacity-0');
+      lines[2]?.classList.add('-translate-y-2', '-rotate-45');
+    } else {
+      lines[0]?.classList.remove('translate-y-2', 'rotate-45');
+      lines[1]?.classList.remove('opacity-0');
+      lines[2]?.classList.remove('-translate-y-2', '-rotate-45');
+    }
+  });
+
+  // Close menu when a mobile link is clicked
+  document.querySelectorAll('.mobile-nav-link').forEach((link) => {
+    link.addEventListener('click', () => {
+      menu?.classList.add('hidden');
+      toggle?.setAttribute('aria-expanded', 'false');
+      lines[0]?.classList.remove('translate-y-2', 'rotate-45');
+      lines[1]?.classList.remove('opacity-0');
+      lines[2]?.classList.remove('-translate-y-2', '-rotate-45');
+    });
+  });
+</script>
+
+<section id="page-top" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-14">
+  <!-- GIF background -->
+  <div class="absolute inset-0 z-0">
+    <img
+      src="/header-bg.gif"
+      alt="Header background"
+      class="w-full h-full object-cover opacity-30"
+    />
+  </div>
+
+  <div class="container mx-auto px-4 z-10">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="flex flex-col items-center mb-8 animate-fade-in">
+        <div class="w-32 h-32 rounded-full border-4 border-white/50 shadow-xl mb-6 overflow-hidden bg-gradient-to-br from-blue-100 to-blue-50">
+          <img
+            src="/img/profile.jpg"
+            alt="Ivana Jones"
+            class="w-full h-full object-cover"
+            onerror="this.style.display='none'; this.parentElement.innerHTML='<div class=\'w-full h-full flex items-center justify-center text-4xl\'>IJ</div>'"
+          />
+        </div>
+        <h1 class="text-6xl font-bold mb-2">Ivana Jones</h1>
+        <h2 class="text-3xl text-apple-gray-400 mb-6">Senior Business Intelligence Developer | Community Builder</h2>
+      </div>
+      <p class="text-xl text-apple-gray-500 mb-8 animate-slide-up">
+        <strong>Data Driven, Community Fueled</strong>
+      </p>
+    </div>
+  </div>
+</section>

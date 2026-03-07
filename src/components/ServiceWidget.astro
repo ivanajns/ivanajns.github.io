@@ -1,0 +1,153 @@
+---
+interface Service {
+  title: string;
+  company: string;
+  period: string;
+  description: string[];
+}
+
+interface Award {
+  degree: string;
+  school: string;
+  period: string;
+  achievements: string[];
+}
+
+const services: Service[] = [
+  {
+    title: "Founder",
+    company: "Career Cheat Sheets",
+    period: "",
+    description: [
+      "Career Cheat Sheets is my nonprofit community initiative where I created and delivered a five-part career development series covering the knowledge and lessons I wish I had access to as a student. Through community organization partnerships, this work has supported and empowered more than 150 youth to navigate their careers confidently."
+    ]
+  },
+  {
+    title: "Finance Committee Volunteer",
+    company: "First Gen Success",
+    period: "",
+    description: [
+      "First Gen Success is a cause that is personal to me, shaped by my own experience as a first-generation student. I volunteer on the Finance Committee, providing financial reporting support to help strengthen the organization's operations and ensure continued impact for students as they pursue opportunities that once felt out of reach."
+    ]
+  },
+  {
+    title: "Mentorship Under a Director",
+    company: "Charlotte Young Professionals Group",
+    period: "",
+    description: [
+      "Charlotte Young Professionals Group is a regional organization focused on professional development and networking within the Charlotte community. I participated in a year-long, structured mentorship under a Director, gaining valuable perspective on leadership, career growth, and navigating professional environments."
+    ]
+  }
+];
+
+const awards: Award[] = [
+  {
+    degree: "Next Tech Award",
+    school: "North Carolina Technology Association (NC Tech)",
+    period: "2025",
+    achievements: [
+      "I'm honored that I was selected as a Next Tech Award winner by the North Carolina Technology Association (NC Tech), in partnership with Business North Carolina. The award recognizes rising tech talent making meaningful contributions to their organizations and communities across North Carolina."
+    ]
+  },
+  {
+    degree: "Black Women in Tech Feature",
+    school: "Global Tech Advocates",
+    period: "",
+    achievements: [
+      "I'm thrilled that I was featured by Global Tech Advocate's Black Women in Tech, a not-for-profit network that aims to support Black women in technology and help companies perform better through diversity and inclusion. I was selected to share my unconventional story and lessons learned in their fifth edition of Voices in the Shadow."
+    ]
+  },
+  {
+    degree: "TOP 30 UNDER 30 Future Leaders Of Charlotte Award",
+    school: "Charlotte Young Professionals Group",
+    period: "2025",
+    achievements: [
+      "I'm honored to be named among Charlotte's Top 30 Under 30 Class of 2025, an award that celebrates young professionals making a meaningful impact in business leadership and the community. It's truly inspiring to be recognized alongside such talented peers who are doing amazing work to uplift and strengthen our community."
+    ]
+  }
+];
+---
+
+<div class="space-y-8">
+  <div id="leadership" class="bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl">
+    <h3 class="text-2xl font-semibold mb-4">Service</h3>
+    <!-- Service Photos -->
+    <div class="grid grid-cols-2 gap-4 mb-6">
+      <img
+        src="/img/service-1.jpg"
+        alt="Service photo 1"
+        class="w-full h-40 object-cover rounded-2xl bg-apple-gray-100"
+        onerror="this.style.background='#e5e7eb'; this.style.display='block'"
+      />
+      <img
+        src="/img/service-2.jpg"
+        alt="Service photo 2"
+        class="w-full h-40 object-cover rounded-2xl bg-apple-gray-100"
+        onerror="this.style.background='#e5e7eb'; this.style.display='block'"
+      />
+    </div>
+    <div class="space-y-6">
+      {services.map((service) => (
+        <div class="border-l-2 border-blue-500 pl-4 pb-6">
+          <div class="flex flex-col sm:flex-row justify-between items-start gap-2 mb-4">
+            <div>
+              <h4 class="text-xl font-medium text-apple-gray-500">{service.title}</h4>
+              <p class="text-apple-gray-400">{service.company}</p>
+            </div>
+            {service.period && (
+              <span class="text-sm text-apple-gray-300 bg-apple-gray-100 px-3 py-1 rounded-full whitespace-nowrap">
+                {service.period}
+              </span>
+            )}
+          </div>
+          <ul class="list-disc list-inside text-apple-gray-400 mb-3 space-y-1">
+            {service.description.map((item) => (
+              <li>{item}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div id="awards" class="bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl">
+    <h3 class="text-2xl font-semibold mb-4">Awards</h3>
+    <!-- Awards Photos -->
+    <div class="grid grid-cols-2 gap-4 mb-6">
+      <img
+        src="/img/awards-1.jpg"
+        alt="Awards photo 1"
+        class="w-full h-40 object-cover rounded-2xl bg-apple-gray-100"
+        onerror="this.style.background='#e5e7eb'; this.style.display='block'"
+      />
+      <img
+        src="/img/awards-2.jpg"
+        alt="Awards photo 2"
+        class="w-full h-40 object-cover rounded-2xl bg-apple-gray-100"
+        onerror="this.style.background='#e5e7eb'; this.style.display='block'"
+      />
+    </div>
+    <div class="space-y-6">
+      {awards.map((award) => (
+        <div class="border-l-2 border-blue-500 pl-4 pb-6">
+          <div class="flex flex-col sm:flex-row justify-between items-start gap-2 mb-4">
+            <div>
+              <h4 class="text-xl font-medium text-apple-gray-500">{award.degree}</h4>
+              <p class="text-apple-gray-400">{award.school}</p>
+            </div>
+            {award.period && (
+              <span class="text-sm text-apple-gray-300 bg-apple-gray-100 px-3 py-1 rounded-full whitespace-nowrap">
+                {award.period}
+              </span>
+            )}
+          </div>
+          <ul class="list-disc list-inside text-apple-gray-400 space-y-1">
+            {award.achievements.map((achievement) => (
+              <li>{achievement}</li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+</div>

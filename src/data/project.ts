@@ -20,9 +20,11 @@ export const projects: Project[] = [
   {
     id: 3,
     title: "Executive Presentations",
-    description: "I delivered a presentation at the Tech Innovation Forum for the broader accounting division in January 2025, targeting leadership, including the department VP and CFO. The session showcased an ideal Robotic Process Automation (RPA) solution designed to enhance the efficiency and reliability of a key business process. More broadly, it demonstrates a practical framework for identifying and modernizing other finance processes in a way that strengthens controls while increasing efficiency. This work provided leadership with a tangible example of the ROI that a disciplined automation can deliver when it is aligned to business priorities.",
+    descriptionLabel: "About This Presentation",
+    description: "Presented to the accounting division's VP and CFO at the Tech Innovation Forum, January 2025. Showcased a practical RPA framework for identifying and modernizing finance processes for efficiency gains and strengthened controls.",
+    results: "Gave leadership a concrete ROI model for disciplined automation aligned to business priorities, and established a replicable framework for evaluating future finance process modernization opportunities.",
     image: "/img/portfolio/presentation.png",
-    tags: ["RPA", "Process Automation", "Strategic Planning"],
+    tags: [],
     featured: true
   }
 ];

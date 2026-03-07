@@ -115,7 +115,7 @@ export default function ProjectsGrid({ projects }: Props) {
               {/* About this project */}
               <div>
                 <h3 className="text-sm font-semibold text-apple-gray-400 uppercase tracking-wide mb-2">
-                  About This Project
+                  {activeProject.descriptionLabel ?? 'About This Project'}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-sm">
                   {activeProject.description}
@@ -127,21 +127,27 @@ export default function ProjectsGrid({ projects }: Props) {
                 )}
               </div>
 
-              {/* Technologies */}
+              {/* Results */}
               <div>
                 <h3 className="text-sm font-semibold text-apple-gray-400 uppercase tracking-wide mb-2">
                   Results
                 </h3>
-                <div className="flex flex-wrap gap-2">
-                  {activeProject.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm border border-blue-100"
-                    >
-                      {tag}
-                    </span>
-                  ))}
-                </div>
+                {activeProject.results ? (
+                  <p className="text-gray-600 leading-relaxed text-sm">
+                    {activeProject.results}
+                  </p>
+                ) : (
+                  <div className="flex flex-wrap gap-2">
+                    {activeProject.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-3 py-1 bg-blue-50 text-blue-600 rounded-full text-sm border border-blue-100"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                )}
               </div>
 
               {/* Action buttons */}

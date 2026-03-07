@@ -3,7 +3,7 @@ import type { Project } from "../types/project";
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Full-Stack Cloud Solution",
+    title: "Full-Stack Cloud Analytics Solution",
     description: "The Project Tracker Power BI Dashboard automates the process of generating a real-time report that consolidates key project metrics for the project management team. Previously, this data was spread across multiple tools and updated manually, leading to inefficiencies and potential errors. Power BI ensures accurate and timely insights, allowing the team to monitor project status, budgets, deadlines, and priorities effectively. A Power Automate flow kicks off a dashboard refresh whenever changes occur in the centralized SharePoint list, ensuring that the dashboard always reflects the most current project data.",
     image: "/img/portfolio/mpowerbi.png",
     tags: ["Power BI", "Power BI Desktop"],
@@ -11,7 +11,7 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Full-Stack On-Prem Solution",
+    title: "End-to-End ETL Reporting Automation",
     description: "The Project Management Power App automates the project intake, management, and review process for the projects teams. It replaces manual processes and disconnected tools with a unified solution that features a refresh of the Power BI dashboard upon data changes, notifications to stakeholders when a project is updated or approved, and a built-in Copilot Virtual Agent for users to get instant answers. This enhances accuracy, timeliness, and communication, significantly improving project management efficiency.",
     image: "/img/portfolio/mpapp.png",
     tags: ["Power Apps", "Power Automate", "SharePoint", "Copilot Virtual Agent"],

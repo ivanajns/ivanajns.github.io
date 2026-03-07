@@ -2,6 +2,7 @@
 interface Service {
   title: string;
   company: string;
+  companyUrl: string;
   period: string;
   description: string[];
 }
@@ -17,6 +18,7 @@ const services: Service[] = [
   {
     title: "Founder",
     company: "Career Cheat Sheets",
+    companyUrl: "https://beacons.ai/careercheatsheets",
     period: "",
     description: [
       "Career Cheat Sheets is my nonprofit community initiative where I created and delivered a five-part career development series covering the knowledge and lessons I wish I had access to as a student. Through community organization partnerships, this work has supported and empowered more than 150 youth to navigate their careers confidently."
@@ -25,6 +27,7 @@ const services: Service[] = [
   {
     title: "Finance Committee Volunteer",
     company: "First Gen Success",
+    companyUrl: "https://www.firstgensuccess.org",
     period: "",
     description: [
       "First Gen Success is a cause that is personal to me, shaped by my own experience as a first-generation student. I volunteer on the Finance Committee, providing financial reporting support to help strengthen the organization's operations and ensure continued impact for students as they pursue opportunities that once felt out of reach."
@@ -33,6 +36,7 @@ const services: Service[] = [
   {
     title: "Mentorship Under a Director",
     company: "Charlotte Young Professionals Group",
+    companyUrl: "https://www.cypg.org",
     period: "",
     description: [
       "Charlotte Young Professionals Group is a regional organization focused on professional development and networking within the Charlotte community. I participated in a year-long, structured mentorship under a Director, gaining valuable perspective on leadership, career growth, and navigating professional environments."
@@ -43,10 +47,10 @@ const services: Service[] = [
 const awards: Award[] = [
   {
     degree: "Next Tech Award",
-    school: "North Carolina Technology Association (NC Tech)",
+    school: "North Carolina Technology Association",
     period: "2025",
     achievements: [
-      "I'm honored that I was selected as a Next Tech Award winner by the North Carolina Technology Association (NC Tech), in partnership with Business North Carolina. The award recognizes rising tech talent making meaningful contributions to their organizations and communities across North Carolina."
+      "I'm honored that I was selected as a Next Tech Award winner by the North Carolina Technology Association, in partnership with Business North Carolina. The award recognizes rising tech talent making meaningful contributions to their organizations and communities across North Carolina."
     ]
   },
   {
@@ -58,8 +62,8 @@ const awards: Award[] = [
     ]
   },
   {
-    degree: "TOP 30 UNDER 30 Future Leaders Of Charlotte Award",
-    school: "Charlotte Young Professionals Group",
+    degree: "Top 30 Under 30 Future Leaders of Charlotte Award",
+    school: "Elevate Lifestyle",
     period: "2025",
     achievements: [
       "I'm honored to be named among Charlotte's Top 30 Under 30 Class of 2025, an award that celebrates young professionals making a meaningful impact in business leadership and the community. It's truly inspiring to be recognized alongside such talented peers who are doing amazing work to uplift and strengthen our community."
@@ -92,7 +96,9 @@ const awards: Award[] = [
           <div class="flex flex-col sm:flex-row justify-between items-start gap-2 mb-4">
             <div>
               <h4 class="text-xl font-medium text-apple-gray-500">{service.title}</h4>
-              <p class="text-apple-gray-400">{service.company}</p>
+              <a href={service.companyUrl} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition-colors">
+                {service.company}
+              </a>
             </div>
             {service.period && (
               <span class="text-sm text-apple-gray-300 bg-apple-gray-100 px-3 py-1 rounded-full whitespace-nowrap">

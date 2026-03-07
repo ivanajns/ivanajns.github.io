@@ -24,7 +24,7 @@ export const projects: Project[] = [
     description: "Presented to the accounting division's VP and CFO at the Tech Innovation Forum, January 2025. Showcased a practical RPA framework for identifying and modernizing finance processes for efficiency gains and strengthened controls.",
     results: "Gave leadership a concrete ROI model for disciplined automation aligned to business priorities, and established a replicable framework for evaluating future finance process modernization opportunities.",
     image: "/img/portfolio/presentation.png",
-    tags: ["RPA", "Process Automation", "Strategic Planning"],
+    tags: ["Process Automation", "Strategic Planning"],
     featured: true
   }
 ];

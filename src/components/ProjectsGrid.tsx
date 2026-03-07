@@ -42,7 +42,7 @@ export default function ProjectsGrid({ projects }: Props) {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full sm:w-24 h-40 sm:h-24 rounded-xl object-contain bg-blue-50 flex-shrink-0"
+                className="w-full sm:w-24 h-40 sm:h-24 rounded-xl object-cover flex-shrink-0"
               />
               <div className="flex-1 min-w-0">
                 <h4 className="text-lg font-medium text-blue-900 mb-1 group-hover:text-blue-600 transition-colors">
@@ -98,11 +98,11 @@ export default function ProjectsGrid({ projects }: Props) {
             </button>
 
             {/* Project image */}
-            <div className="w-full h-56 overflow-hidden rounded-t-3xl">
+            <div className="w-full overflow-hidden rounded-t-3xl bg-blue-50">
               <img
                 src={activeProject.image}
                 alt={activeProject.title}
-                className="w-full h-full object-cover"
+                className="w-full h-auto object-contain"
               />
             </div>
 

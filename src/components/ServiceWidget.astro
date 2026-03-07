@@ -105,7 +105,7 @@ const awards: Award[] = [
       ))}
       </div>
       <div class="hidden md:flex flex-col gap-4 w-80 flex-shrink-0 self-stretch">
-        <button data-modal-img="/img/service-1.jpg" class="flex-1 min-h-0 cursor-pointer">
+        <button data-modal-img="/img/service-1.jpg" data-modal-target="service-modal" class="flex-1 min-h-0 cursor-pointer">
           <img
             src="/img/service-1.jpg"
             alt="Leadership & Service photo 1"
@@ -113,7 +113,7 @@ const awards: Award[] = [
             onerror="this.style.background='#e5e7eb'"
           />
         </button>
-        <button data-modal-img="/img/service-2.jpg" class="flex-1 min-h-0 cursor-pointer">
+        <button data-modal-img="/img/service-2.jpg" data-modal-target="service-modal" class="flex-1 min-h-0 cursor-pointer">
           <img
             src="/img/service-2.jpg"
             alt="Leadership & Service photo 2"
@@ -148,7 +148,7 @@ const awards: Award[] = [
       ))}
       </div>
       <div class="hidden md:flex flex-col gap-4 w-80 flex-shrink-0 self-stretch">
-        <button data-modal-img="/img/awards-1.jpg" class="flex-1 min-h-0 cursor-pointer">
+        <button data-modal-img="/img/awards-1.jpg" data-modal-target="awards-modal" class="flex-1 min-h-0 cursor-pointer">
           <img
             src="/img/awards-1.jpg"
             alt="Honors & Awards photo 1"
@@ -156,7 +156,7 @@ const awards: Award[] = [
             onerror="this.style.background='#e5e7eb'"
           />
         </button>
-        <button data-modal-img="/img/awards-2.jpg" class="flex-1 min-h-0 cursor-pointer">
+        <button data-modal-img="/img/awards-2.jpg" data-modal-target="awards-modal" class="flex-1 min-h-0 cursor-pointer">
           <img
             src="/img/awards-2.jpg"
             alt="Honors & Awards photo 2"
@@ -169,50 +169,81 @@ const awards: Award[] = [
   </div>
 </div>
 
-<!-- Image modal -->
-<div id="img-modal" class="fixed inset-0 z-50 hidden overflow-y-auto">
-  <div id="img-modal-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm"></div>
+<!-- Leadership & Service modal -->
+<div id="service-modal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+  <div id="service-modal-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm"></div>
   <div class="flex min-h-full items-center justify-center p-4">
     <div class="relative z-10 max-w-4xl w-full">
-      <button id="img-modal-close" class="absolute top-3 right-3 z-20 w-9 h-9 flex items-center justify-center bg-black/60 hover:bg-black/80 rounded-full text-white transition-colors" aria-label="Close">
+      <button id="service-modal-close" class="absolute top-3 right-3 z-20 w-9 h-9 flex items-center justify-center bg-black/60 hover:bg-black/80 rounded-full text-white transition-colors" aria-label="Close">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
         </svg>
       </button>
-      <img id="img-modal-img" src="" alt="" class="w-full h-auto rounded-2xl shadow-2xl block" />
+      <img id="service-modal-img" src="" alt="" class="w-full h-auto rounded-2xl shadow-2xl block" />
+    </div>
+  </div>
+</div>
+
+<!-- Honors & Awards modal -->
+<div id="awards-modal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+  <div id="awards-modal-backdrop" class="fixed inset-0 bg-black/70 backdrop-blur-sm"></div>
+  <div class="flex min-h-full items-center justify-center p-4">
+    <div class="relative z-10 max-w-4xl w-full">
+      <button id="awards-modal-close" class="absolute top-3 right-3 z-20 w-9 h-9 flex items-center justify-center bg-black/60 hover:bg-black/80 rounded-full text-white transition-colors" aria-label="Close">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="w-5 h-5">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
+      <img id="awards-modal-img" src="" alt="" class="w-full h-auto rounded-2xl shadow-2xl block" />
     </div>
   </div>
 </div>
 
 <script>
-  const modal = document.getElementById('img-modal')!;
-  const modalImg = document.getElementById('img-modal-img') as HTMLImageElement;
-  const backdrop = document.getElementById('img-modal-backdrop')!;
-  const closeBtn = document.getElementById('img-modal-close')!;
+  function setupModal(modalId: string) {
+    const modal = document.getElementById(modalId)!;
+    const modalImg = document.getElementById(`${modalId}-img`) as HTMLImageElement;
+    const backdrop = document.getElementById(`${modalId}-backdrop`)!;
+    const closeBtn = document.getElementById(`${modalId}-close`)!;
 
-  function openModal(src: string, alt: string) {
-    modalImg.src = src;
-    modalImg.alt = alt;
-    modal.classList.remove('hidden');
-    document.body.style.overflow = 'hidden';
+    function closeModal() {
+      modal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    backdrop.addEventListener('click', closeModal);
+    closeBtn.addEventListener('click', closeModal);
+
+    return { modal, modalImg, closeModal };
   }
 
-  function closeModal() {
-    modal.classList.add('hidden');
-    document.body.style.overflow = '';
-  }
+  const { modal: serviceModal, modalImg: serviceImg } = setupModal('service-modal');
+  const { modal: awardsModal, modalImg: awardsImg } = setupModal('awards-modal');
 
   document.querySelectorAll<HTMLButtonElement>('[data-modal-img]').forEach((btn) => {
     btn.addEventListener('click', () => {
       const src = btn.dataset.modalImg!;
       const alt = btn.querySelector('img')?.alt || '';
-      openModal(src, alt);
+      const targetId = btn.dataset.modalTarget!;
+
+      if (targetId === 'service-modal') {
+        serviceImg.src = src;
+        serviceImg.alt = alt;
+        serviceModal.classList.remove('hidden');
+      } else if (targetId === 'awards-modal') {
+        awardsImg.src = src;
+        awardsImg.alt = alt;
+        awardsModal.classList.remove('hidden');
+      }
+      document.body.style.overflow = 'hidden';
     });
   });
 
-  backdrop.addEventListener('click', closeModal);
-  closeBtn.addEventListener('click', closeModal);
   document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') closeModal();
+    if (e.key === 'Escape') {
+      serviceModal.classList.add('hidden');
+      awardsModal.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
   });
 </script>

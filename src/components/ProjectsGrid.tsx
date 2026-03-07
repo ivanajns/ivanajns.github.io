@@ -42,7 +42,7 @@ export default function ProjectsGrid({ projects }: Props) {
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full sm:w-24 h-40 sm:h-24 rounded-xl object-cover flex-shrink-0"
+                className="w-full sm:w-24 h-40 sm:h-24 rounded-xl object-contain bg-blue-50 flex-shrink-0"
               />
               <div className="flex-1 min-w-0">
                 <h4 className="text-lg font-medium text-blue-900 mb-1 group-hover:text-blue-600 transition-colors">
@@ -130,7 +130,7 @@ export default function ProjectsGrid({ projects }: Props) {
               {/* Technologies */}
               <div>
                 <h3 className="text-sm font-semibold text-apple-gray-400 uppercase tracking-wide mb-2">
-                  Technologies Used
+                  Results
                 </h3>
                 <div className="flex flex-wrap gap-2">
                   {activeProject.tags.map((tag) => (

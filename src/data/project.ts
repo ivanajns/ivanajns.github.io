@@ -19,7 +19,7 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Strategic Automation Example",
+    title: "Executive Presentations",
     description: "I delivered a presentation at the Tech Innovation Forum for the broader accounting division in January 2025, targeting leadership, including the department VP and CFO. The session showcased an ideal Robotic Process Automation (RPA) solution designed to enhance the efficiency and reliability of a key business process. More broadly, it demonstrates a practical framework for identifying and modernizing other finance processes in a way that strengthens controls while increasing efficiency. This work provided leadership with a tangible example of the ROI that a disciplined automation can deliver when it is aligned to business priorities.",
     image: "/img/portfolio/presentation.png",
     tags: ["RPA", "Process Automation", "Strategic Planning"],

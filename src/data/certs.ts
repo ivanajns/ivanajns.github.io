@@ -14,7 +14,7 @@ export const certs: Cert[] = [
   },
   {
     id: 2,
-    title: "Python Institute Certified: Associate Data Analyst with Python",
+    title: "Python Certified: Associate Data Analyst with Python",
     image: "/img/portfolio/cert-2.jpg",
     url: "https://www.credly.com/badges/d8a70381-6213-4752-a16a-d93fe141e728"
   },

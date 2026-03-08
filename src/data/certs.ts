@@ -12,7 +12,7 @@ export const certs: Cert[] = [
     title: "Coursera: Google Business Intelligence",
     image: "/img/portfolio/cert-1.jpg",
     url: "https://www.credly.com/badges/df2933f5-516c-4e35-936e-45ecc7862875",
-    tags: ["Data Analytics", "Tableau", "SQL"]
+    tags: ["Data Analytics", "Tableau", "Power BI", "SQL"]
   },
   {
     id: 2,

@@ -51,11 +51,11 @@ export default function ProjectsGrid({ projects }: Props) {
                 <p className="text-blue-600 text-sm hidden">
                   {project.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-0.5 bg-blue-100 text-blue-600 rounded-full text-xs"
+                      className="px-1.5 py-0.5 bg-blue-100 text-blue-600 rounded-full text-xs"
                     >
                       {tag}
                     </span>

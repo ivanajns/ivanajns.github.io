@@ -36,9 +36,9 @@ export default function ProjectsGrid({ projects }: Props) {
           <button
             key={project.id}
             onClick={() => setActiveProject(project)}
-            className="w-full text-left bg-gradient-to-br from-blue-50 to-white p-4 sm:p-5 rounded-2xl hover:shadow-lg transition-all duration-300 group"
+            className="w-full text-left bg-gradient-to-br from-blue-50 to-white p-4 rounded-2xl hover:shadow-lg transition-all duration-300 group"
           >
-            <div className="flex items-center gap-4">
+            <div className="flex items-start gap-4">
               <img
                 src={project.image}
                 alt={project.title}

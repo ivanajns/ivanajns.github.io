@@ -24,8 +24,12 @@ const achievements: Achievement[] = [
 ];
 ---
 
-<div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-4 shadow-lg text-white hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
-  <div class="grid grid-cols-3 gap-4">
+<div class="relative overflow-hidden bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-4 shadow-lg text-white hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
+  <!-- Specular highlight: hairline at top edge -->
+  <div class="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/50 to-transparent pointer-events-none"></div>
+  <!-- Short top-fade beneath it -->
+  <div class="absolute top-0 left-0 right-0 h-8 bg-gradient-to-b from-white/8 to-transparent pointer-events-none"></div>
+  <div class="relative grid grid-cols-3 gap-4">
     {achievements.map((achievement) => (
       <div class="text-center">
         <p class="text-2xl font-bold mb-0.5">{achievement.number}</p>

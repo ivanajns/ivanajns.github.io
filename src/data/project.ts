@@ -21,8 +21,8 @@ export const projects: Project[] = [
     id: 3,
     title: "Executive Presentation",
     descriptionLabel: "About This Presentation",
-    description: "Presented to the accounting division's VP and CFO at the Tech Innovation Forum, January 2025. Showcased a practical RPA framework for identifying and modernizing finance processes for efficiency gains and strengthened controls.",
-    results: "Gave leadership a concrete ROI model for disciplined automation aligned to business priorities, and established a replicable framework for evaluating future finance process modernization opportunities.",
+    description: "Presented to the Accounting Division's VP and CFO at the Tech Innovation Forum (January 2025). I demonstrated an automation solution I developed to streamline a finance workflow, quantified its operational impact, and outlined the approach used to identify high-value automation opportunities within accounting processes.",
+    results: "Equipped leadership with a clear view of the ROI and operational benefits of targeted automation, and introduced a practical approach for evaluating and prioritizing future finance process improvements.",
     image: "/img/portfolio/presentation.png",
     tags: ["Strategic Planning", "Finance Operations Automation", "Cross-Functional Communication"],
     featured: true

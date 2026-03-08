@@ -19,13 +19,13 @@ export const certs: Cert[] = [
     title: "Python Certified: Associate Data Analyst with Python",
     image: "/img/portfolio/cert-2.jpg",
     url: "https://www.credly.com/badges/d8a70381-6213-4752-a16a-d93fe141e728",
-    tags: ["Data Analysis", "Pandas", "SQL"]
+    tags: ["Data Analysis", "Python", "Pandas", "SQL"]
   },
   {
     id: 3,
     title: "CSSC Certified: Lean Six Sigma Green Belt",
     image: "/img/portfolio/cert-3.jpg",
     url: "https://badgr.com/public/assertions/B42VPRpaQV6Vz6WuYFB6ug",
-    tags: ["Process Improvement", "Operational Efficiency", "Change Management"]
+    tags: ["Process Improvement", "Change Management"]
   }
 ];

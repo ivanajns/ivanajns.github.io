@@ -45,14 +45,14 @@ export default function ProjectsGrid({ projects }: Props) {
                 className="w-16 h-16 rounded-xl object-cover flex-shrink-0"
               />
               <div className="flex-1 min-w-0">
-                <h4 className="text-sm font-medium text-blue-900 mb-3 group-hover:text-blue-600 transition-colors leading-snug">
+                <h4 className="text-base font-medium text-blue-600 mb-3 group-hover:text-blue-800 transition-colors leading-snug">
                   {project.title}
                 </h4>
                 <div className="flex flex-wrap gap-1">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-2 py-0.5 bg-blue-100 text-blue-600 rounded-full text-xs"
+                      className="px-2 py-0.5 bg-blue-100 text-blue-900 rounded-full text-xs"
                     >
                       {tag}
                     </span>

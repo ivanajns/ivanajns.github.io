@@ -45,10 +45,10 @@ export default function ProjectsGrid({ projects }: Props) {
                 className="w-full sm:w-24 h-40 sm:h-24 rounded-xl object-cover flex-shrink-0"
               />
               <div className="flex-1 min-w-0">
-                <h4 className="text-lg font-medium text-blue-900 mb-1 group-hover:text-blue-600 transition-colors">
+                <h4 className="text-lg font-medium text-blue-900 mb-3 group-hover:text-blue-600 transition-colors">
                   {project.title}
                 </h4>
-                <p className="text-blue-600 text-sm mb-3 hidden">
+                <p className="text-blue-600 text-sm hidden">
                   {project.description}
                 </p>
                 <div className="flex flex-wrap gap-2">

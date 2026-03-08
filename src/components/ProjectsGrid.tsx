@@ -36,7 +36,7 @@ export default function ProjectsGrid({ projects }: Props) {
           <button
             key={project.id}
             onClick={() => setActiveProject(project)}
-            className="w-full block text-left bg-gradient-to-br from-blue-50 to-white p-4 sm:p-5 rounded-2xl hover:shadow-lg transition-all duration-300 group"
+            className="w-full text-left bg-gradient-to-br from-blue-50 to-white p-4 sm:p-5 rounded-2xl hover:shadow-lg transition-all duration-300 group"
           >
             <div className="flex flex-col sm:flex-row gap-4 sm:gap-5">
               <img
@@ -44,14 +44,11 @@ export default function ProjectsGrid({ projects }: Props) {
                 alt={project.title}
                 className="w-full sm:w-20 h-40 sm:h-20 rounded-xl object-cover flex-shrink-0"
               />
-              <div className="flex-1 min-w-0 overflow-hidden">
+              <div className="flex-1 min-w-0">
                 <h4 className="text-lg font-medium text-blue-900 mb-3 group-hover:text-blue-600 transition-colors">
                   {project.title}
                 </h4>
-                <p className="text-blue-600 text-sm hidden">
-                  {project.description}
-                </p>
-                <div className="flex flex-wrap gap-1 w-full">
+                <div className="flex flex-wrap gap-1">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}

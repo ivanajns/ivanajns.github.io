@@ -24,8 +24,10 @@ const achievements: Achievement[] = [
 ];
 ---
 
-<div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-4 shadow-lg text-white hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
-  <div class="grid grid-cols-3 gap-4">
+<div class="relative overflow-hidden bg-gradient-to-r from-blue-400 to-blue-900 rounded-2xl p-4 shadow-lg text-white hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
+  <!-- Shimmer overlay -->
+  <div class="absolute inset-0 bg-gradient-to-br from-white/20 via-white/5 to-transparent rounded-2xl pointer-events-none"></div>
+  <div class="relative grid grid-cols-3 gap-4">
     {achievements.map((achievement) => (
       <div class="text-center">
         <p class="text-2xl font-bold mb-0.5">{achievement.number}</p>

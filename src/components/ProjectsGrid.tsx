@@ -38,29 +38,29 @@ export default function ProjectsGrid({ projects }: Props) {
             onClick={() => setActiveProject(project)}
             className="w-full text-left bg-gradient-to-br from-blue-50 to-white p-4 sm:p-5 rounded-2xl hover:shadow-lg transition-all duration-300 group"
           >
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-5">
+            <div className="flex items-center gap-4">
               <img
                 src={project.image}
                 alt={project.title}
-                className="w-full sm:w-20 h-40 sm:h-20 rounded-xl object-cover flex-shrink-0"
+                className="w-16 h-16 rounded-xl object-cover flex-shrink-0"
               />
               <div className="flex-1 min-w-0">
-                <h4 className="text-lg font-medium text-blue-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <h4 className="text-sm font-medium text-blue-900 mb-3 group-hover:text-blue-600 transition-colors leading-snug">
                   {project.title}
                 </h4>
                 <div className="flex flex-wrap gap-1">
                   {project.tags.map((tag) => (
                     <span
                       key={tag}
-                      className="px-1.5 py-0.5 bg-blue-100 text-blue-600 rounded-full text-xs"
+                      className="px-2 py-0.5 bg-blue-100 text-blue-600 rounded-full text-xs"
                     >
                       {tag}
                     </span>
                   ))}
                 </div>
               </div>
-              <div className="hidden sm:flex items-center text-blue-300 group-hover:text-blue-500 transition-colors flex-shrink-0">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
+              <div className="flex-shrink-0 text-blue-300 group-hover:text-blue-500 transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
                   <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
                 </svg>
               </div>

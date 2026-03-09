@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro'
 import Hero from '../components/Hero.astro'
-import InfoWidgets from '../components/InfoWidgets.astro'
 import AchievementsWidget from '../components/AchievementsWidget.astro'
 import AboutWidget from '../components/AboutWidget.astro'
 import ProjectsWidget from '../components/ProjectsWidget.astro'
@@ -18,9 +17,6 @@ import LocationCard from '../components/LocationCard.astro'
 
     <section class="py-20 px-4">
       <div class="container mx-auto max-w-6xl">
-        <div class="mb-8" data-animate>
-          <InfoWidgets />
-        </div>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 items-stretch" data-animate>
           <div class="md:col-span-2"><AchievementsWidget /></div>
           <div class="md:col-span-1"><LocationCard /></div>

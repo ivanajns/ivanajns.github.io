@@ -4,9 +4,9 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "Full-Stack Cloud Analytics",
-    description: "The Project Tracker Power BI Dashboard automates the process of generating a real-time report that consolidates key project metrics for the project management team. Previously, this data was spread across multiple tools and updated manually, leading to inefficiencies and potential errors. Power BI ensures accurate and timely insights, allowing the team to monitor project status, budgets, deadlines, and priorities effectively. A Power Automate flow kicks off a dashboard refresh whenever changes occur in the centralized SharePoint list, ensuring that the dashboard always reflects the most current project data.",
+    description: "This solution created a governed workflow for operational data updates while maintaining reliable analytics for leadership reporting.\nUsers submit updates through a Power App interface, which triggers an automated workflow that routes requests for manager approval. Once approved, the data moves through a pipeline into centralized storage and refreshes downstream dashboards.\nThe system was designed to separate user interaction, approval workflows, data processing, and analytics delivery, ensuring both usability for business teams and control over reporting data.",
     image: "/img/portfolio/mpowerbi.png",
-    tags: ["Power BI", "Power BI Desktop"],
+    tags: ["Power Apps", "Power Automate", "Microsoft Fabric Pipelines", "Azure Data Tables", "Power BI"],
     featured: true
   },
   {

@@ -82,16 +82,14 @@ const awards: Award[] = [
     <h3 class="text-2xl font-semibold text-blue-900 mb-4 pb-4 border-b border-blue-100 tracking-wide">Leadership & Service</h3>
     <div class="space-y-6">
       {services.map((service) => (
-        <div class="border-l-2 border-blue-600 pl-4">
-          <div class="flex flex-col sm:flex-row justify-between items-start gap-2 mb-4">
-            <div>
-              <h4 class="text-xl font-medium text-apple-gray-500">{service.title}</h4>
-              <a href={service.companyUrl} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition-colors">
-                {service.company}
-              </a>
-            </div>
+        <div class="bg-gradient-to-br from-blue-50 to-white p-4 rounded-2xl hover:shadow-lg transition-all duration-300">
+          <div class="mb-2">
+            <h4 class="text-base font-medium text-blue-600 mb-1">{service.title}</h4>
+            <a href={service.companyUrl} target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600/70 hover:text-blue-800 transition-colors">
+              {service.company}
+            </a>
           </div>
-          <div class="text-apple-gray-400 mb-3 space-y-1">
+          <div class="text-apple-gray-400 text-sm leading-relaxed space-y-1">
             {service.description.map((item) => (
               <p>{item}</p>
             ))}
@@ -137,16 +135,14 @@ const awards: Award[] = [
     <h3 class="text-2xl font-semibold text-blue-900 mb-4 pb-4 border-b border-blue-100 tracking-wide">Honors & Awards</h3>
     <div class="space-y-6">
       {awards.map((award) => (
-        <div class="border-l-2 border-blue-600 pl-4">
-          <div class="flex flex-col sm:flex-row justify-between items-start gap-2 mb-4">
-            <div>
-              <h4 class="text-xl font-medium text-apple-gray-500">{award.degree}</h4>
-              <a href={award.schoolUrl} target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:text-blue-800 transition-colors">
-                {award.school}
-              </a>
-            </div>
+        <div class="bg-gradient-to-br from-blue-50 to-white p-4 rounded-2xl hover:shadow-lg transition-all duration-300">
+          <div class="mb-2">
+            <h4 class="text-base font-medium text-blue-600 mb-1">{award.degree}</h4>
+            <a href={award.schoolUrl} target="_blank" rel="noopener noreferrer" class="text-sm text-blue-600/70 hover:text-blue-800 transition-colors">
+              {award.school}
+            </a>
           </div>
-          <div class="text-apple-gray-400 space-y-1">
+          <div class="text-apple-gray-400 text-sm leading-relaxed space-y-1">
             {award.achievements.map((achievement) => (
               <p>{achievement}</p>
             ))}

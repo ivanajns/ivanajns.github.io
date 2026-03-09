@@ -77,10 +77,10 @@ const awards: Award[] = [
 ---
 
 <div class="space-y-8">
+  <!-- Leadership & Service -->
   <div id="leadership" class="bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl border border-white/60 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
     <h3 class="text-2xl font-semibold text-blue-900 mb-4 pb-4 border-b border-blue-100 tracking-wide">Leadership & Service</h3>
-    <div class="flex flex-col md:flex-row gap-6 mb-6">
-      <div class="flex-1 space-y-6">
+    <div class="space-y-6">
       {services.map((service) => (
         <div class="border-l-2 border-blue-600 pl-4 pb-6">
           <div class="flex flex-col sm:flex-row justify-between items-start gap-2 mb-4">
@@ -103,9 +103,21 @@ const awards: Award[] = [
           </div>
         </div>
       ))}
-      </div>
-      <div class="flex flex-col gap-4 w-full md:w-80 flex-shrink-0 md:self-stretch">
-        <button data-modal-img="/img/service-1.jpg" data-modal-target="service-modal" class="h-48 md:flex-1 md:min-h-0 cursor-pointer">
+    </div>
+
+    <!-- Chevron toggle -->
+    <div class="flex justify-center pt-2">
+      <button id="service-chevron" class="text-blue-200 hover:text-blue-400 transition-colors" aria-label="Toggle photos">
+        <svg id="service-chevron-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 transition-transform duration-300">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Collapsible images -->
+    <div id="service-images" class="overflow-hidden transition-all duration-500" style="max-height: 0;">
+      <div class="flex flex-col sm:flex-row gap-4 pt-4">
+        <button data-modal-img="/img/service-1.jpg" data-modal-target="service-modal" class="flex-1 h-48 cursor-pointer">
           <img
             src="/img/service-1.jpg"
             alt="Leadership & Service photo 1"
@@ -113,7 +125,7 @@ const awards: Award[] = [
             onerror="this.style.background='#e5e7eb'"
           />
         </button>
-        <button data-modal-img="/img/service-2.jpg" data-modal-target="service-modal" class="h-48 md:flex-1 md:min-h-0 cursor-pointer">
+        <button data-modal-img="/img/service-2.jpg" data-modal-target="service-modal" class="flex-1 h-48 cursor-pointer">
           <img
             src="/img/service-2.jpg"
             alt="Leadership & Service photo 2"
@@ -125,10 +137,10 @@ const awards: Award[] = [
     </div>
   </div>
 
+  <!-- Honors & Awards -->
   <div id="awards" class="bg-white/80 backdrop-blur-lg rounded-3xl p-6 shadow-xl border border-white/60 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
     <h3 class="text-2xl font-semibold text-blue-900 mb-4 pb-4 border-b border-blue-100 tracking-wide">Honors & Awards</h3>
-    <div class="flex flex-col md:flex-row gap-6 mb-6">
-      <div class="flex-1 space-y-6">
+    <div class="space-y-6">
       {awards.map((award) => (
         <div class="border-l-2 border-blue-600 pl-4 pb-6">
           <div class="flex flex-col sm:flex-row justify-between items-start gap-2 mb-4">
@@ -138,6 +150,11 @@ const awards: Award[] = [
                 {award.school}
               </a>
             </div>
+            {award.period && (
+              <span class="text-sm text-apple-gray-300 bg-apple-gray-100 px-3 py-1 rounded-full whitespace-nowrap">
+                {award.period}
+              </span>
+            )}
           </div>
           <div class="text-apple-gray-400 space-y-1">
             {award.achievements.map((achievement) => (
@@ -146,9 +163,21 @@ const awards: Award[] = [
           </div>
         </div>
       ))}
-      </div>
-      <div class="flex flex-col gap-4 w-full md:w-80 flex-shrink-0 md:self-stretch">
-        <button data-modal-img="/img/awards-1.jpg" data-modal-target="awards-modal" class="h-48 md:flex-1 md:min-h-0 cursor-pointer">
+    </div>
+
+    <!-- Chevron toggle -->
+    <div class="flex justify-center pt-2">
+      <button id="awards-chevron" class="text-blue-200 hover:text-blue-400 transition-colors" aria-label="Toggle photos">
+        <svg id="awards-chevron-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 transition-transform duration-300">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
+        </svg>
+      </button>
+    </div>
+
+    <!-- Collapsible images -->
+    <div id="awards-images" class="overflow-hidden transition-all duration-500" style="max-height: 0;">
+      <div class="flex flex-col sm:flex-row gap-4 pt-4">
+        <button data-modal-img="/img/awards-1.jpg" data-modal-target="awards-modal" class="flex-1 h-48 cursor-pointer">
           <img
             src="/img/awards-1.jpg"
             alt="Honors & Awards photo 1"
@@ -156,7 +185,7 @@ const awards: Award[] = [
             onerror="this.style.background='#e5e7eb'"
           />
         </button>
-        <button data-modal-img="/img/awards-2.jpg" data-modal-target="awards-modal" class="h-48 md:flex-1 md:min-h-0 cursor-pointer">
+        <button data-modal-img="/img/awards-2.jpg" data-modal-target="awards-modal" class="flex-1 h-48 cursor-pointer">
           <img
             src="/img/awards-2.jpg"
             alt="Honors & Awards photo 2"
@@ -200,6 +229,33 @@ const awards: Award[] = [
 </div>
 
 <script>
+  // Escape GSAP transform stacking context
+  document.body.appendChild(document.getElementById('service-modal')!);
+  document.body.appendChild(document.getElementById('awards-modal')!);
+
+  // Chevron expand/collapse
+  function setupChevron(chevronId: string, iconId: string, imagesId: string) {
+    const chevron = document.getElementById(chevronId)!;
+    const icon = document.getElementById(iconId)!;
+    const images = document.getElementById(imagesId)!;
+    let isOpen = false;
+
+    chevron.addEventListener('click', () => {
+      isOpen = !isOpen;
+      if (isOpen) {
+        images.style.maxHeight = images.scrollHeight + 'px';
+        icon.style.transform = 'rotate(180deg)';
+      } else {
+        images.style.maxHeight = '0';
+        icon.style.transform = 'rotate(0deg)';
+      }
+    });
+  }
+
+  setupChevron('service-chevron', 'service-chevron-icon', 'service-images');
+  setupChevron('awards-chevron', 'awards-chevron-icon', 'awards-images');
+
+  // Modal setup
   function setupModal(modalId: string) {
     const modal = document.getElementById(modalId)!;
     const modalImg = document.getElementById(`${modalId}-img`) as HTMLImageElement;
@@ -214,12 +270,8 @@ const awards: Award[] = [
     backdrop.addEventListener('click', closeModal);
     closeBtn.addEventListener('click', closeModal);
 
-    return { modal, modalImg, closeModal };
+    return { modal, modalImg };
   }
-
-  // Escape GSAP transform stacking context — same fix as React createPortal
-  document.body.appendChild(document.getElementById('service-modal')!);
-  document.body.appendChild(document.getElementById('awards-modal')!);
 
   const { modal: serviceModal, modalImg: serviceImg } = setupModal('service-modal');
   const { modal: awardsModal, modalImg: awardsImg } = setupModal('awards-modal');

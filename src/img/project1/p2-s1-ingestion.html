@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slide 1 — Automated Data Ingestion</title>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+body {
+  width:1200px; height:675px; overflow:hidden;
+  background:#f0f2f5;
+  display:flex; align-items:center; justify-content:center;
+  font-family:'Sora', sans-serif;
+}
+.slide {
+  width:1200px; height:675px;
+  background:#ffffff;
+  display:flex; overflow:hidden; position:relative;
+}
+
+/* Ambient glow */
+.glow {
+  position:absolute;
+  width:560px; height:560px;
+  top:-200px; left:-120px;
+  border-radius:50%;
+  background:radial-gradient(circle, rgba(99,102,241,0.08) 0%, transparent 68%);
+  pointer-events:none;
+}
+
+/* ── Left 58% ── */
+.left {
+  width:58%;
+  padding:64px 52px 56px 64px;
+  display:flex; flex-direction:column;
+  justify-content:space-between;
+  position:relative; z-index:1;
+}
+
+.meta {
+  display:flex; align-items:center; gap:10px;
+}
+.meta-num {
+  font-family:'DM Mono',monospace;
+  font-size:11px; color:#c7d2fe; letter-spacing:0.14em;
+}
+.meta-sep { width:20px; height:1px; background:#e0e7ff; }
+.meta-stage {
+  font-family:'DM Mono',monospace;
+  font-size:11px; font-weight:500; color:#a5b4fc;
+  letter-spacing:0.1em; text-transform:uppercase;
+}
+
+/* Core message */
+.core {
+  flex:1;
+  display:flex; flex-direction:column;
+  justify-content:center;
+  padding:8px 0;
+}
+
+.title {
+  font-size:50px; font-weight:300;
+  color:#0f172a; letter-spacing:0.01em;
+  line-height:1.12; margin-bottom:24px;
+}
+.title span {
+  background:linear-gradient(135deg, #6366f1 10%, #818cf8 90%);
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent; background-clip:text;
+}
+
+.hook {
+  font-size:16px; font-weight:400;
+  color:#64748b; line-height:1.6;
+  max-width:400px; margin-bottom:40px;
+}
+
+/* Tool tags — just two, minimal */
+.tools {
+  display:flex; align-items:center; gap:8px;
+}
+.tool-tag {
+  display:flex; align-items:center; gap:6px;
+  padding:7px 14px;
+  background:#f8f9ff; border:1px solid #e0e7ff;
+  border-radius:8px;
+}
+.tool-tag-dot {
+  width:5px; height:5px; border-radius:50%; background:#6366f1;
+}
+.tool-tag-name {
+  font-family:'DM Mono',monospace;
+  font-size:11px; font-weight:500; color:#4338ca;
+  letter-spacing:0.04em;
+}
+.tool-sep {
+  font-size:12px; color:#e0e7ff;
+  padding:0 2px;
+}
+
+/* Bottom nav */
+.nav {
+  display:flex; align-items:center; justify-content:space-between;
+}
+.dots { display:flex; gap:6px; align-items:center; }
+.dot {
+  height:3px; border-radius:99px; background:#e2e8f0;
+  width:20px;
+}
+.dot.active {
+  background:linear-gradient(90deg,#6366f1,#818cf8);
+  width:36px;
+}
+.nav-label {
+  font-family:'DM Mono',monospace;
+  font-size:10px; color:#e2e8f0; letter-spacing:0.1em;
+}
+
+/* ── Divider ── */
+.divider {
+  width:1px; flex-shrink:0;
+  background:linear-gradient(to bottom,
+    transparent 60px,
+    #f1f5f9 60px,
+    #f1f5f9 calc(100% - 60px),
+    transparent calc(100% - 60px));
+}
+
+/* ── Right 42% ── */
+.right {
+  width:42%;
+  padding:52px 52px 52px 44px;
+  display:flex; align-items:center; justify-content:center;
+  position:relative; z-index:1;
+}
+
+.frame {
+  width:100%; height:100%;
+  max-width:380px; max-height:480px;
+  border-radius:20px;
+  background:linear-gradient(150deg, #f8f9ff 0%, #eef0ff 100%);
+  border:1.5px solid #e0e7ff;
+  box-shadow:
+    inset 0 1px 1px rgba(255,255,255,1),
+    0 2px 8px rgba(99,102,241,0.06),
+    0 12px 40px rgba(99,102,241,0.08),
+    0 32px 80px rgba(99,102,241,0.05);
+  position:relative; overflow:hidden;
+}
+
+/* Subtle inner shimmer */
+.frame::after {
+  content:'';
+  position:absolute;
+  top:0; left:0; right:0;
+  height:1px;
+  background:linear-gradient(90deg, transparent, rgba(255,255,255,0.9), transparent);
+}
+</style>
+</head>
+<body>
+<div class="slide">
+  <div class="glow"></div>
+
+  <div class="left">
+
+    <div class="meta">
+      <div class="meta-num">01</div>
+      <div class="meta-sep"></div>
+      <div class="meta-stage">Ingestion</div>
+    </div>
+
+    <div class="core">
+      <div class="title">Automated<br><span>Data Ingestion</span></div>
+      <div class="hook">Canvas apps capture and submit data through Dataverse — Power Automate handles every downstream action automatically.</div>
+      <div class="tools">
+        <div class="tool-tag">
+          <div class="tool-tag-dot"></div>
+          <div class="tool-tag-name">Power Apps</div>
+        </div>
+        <div class="tool-sep">·</div>
+        <div class="tool-tag">
+          <div class="tool-tag-dot"></div>
+          <div class="tool-tag-name">Dataverse</div>
+        </div>
+        <div class="tool-sep">·</div>
+        <div class="tool-tag">
+          <div class="tool-tag-dot"></div>
+          <div class="tool-tag-name">Power Automate</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nav">
+      <div class="dots">
+        <div class="dot active"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+      </div>
+      <div class="nav-label">Power Platform Stack</div>
+    </div>
+
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="right">
+    <div class="frame"></div>
+  </div>
+
+</div>
+</body>
+</html>

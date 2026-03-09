@@ -28,11 +28,9 @@ const achievements: Achievement[] = [
         <p class="text-blue-100 text-xs">{achievement.label}</p>
       </div>
     ))}
-    <!-- Divider + Contact column -->
-    <div class="flex items-center gap-4">
-      <div class="w-px self-stretch bg-white/30"></div>
-      <div class="text-center flex-1">
-        <div class="flex justify-center gap-3 mb-2">
+    <!-- Contact column -->
+    <div class="text-center border-l border-white/30 pl-4">
+      <div class="flex justify-center gap-3 mb-2">
           <a href="mailto:ivanajns@gmail.com" target="_blank" rel="noopener noreferrer" class="text-white hover:text-blue-900 transition-colors">
             <span class="sr-only">Email</span>
             <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -53,8 +51,7 @@ const achievements: Achievement[] = [
             </svg>
           </a>
         </div>
-        <p class="text-xs text-blue-100">Contact</p>
-      </div>
+      <p class="text-xs text-blue-100">Contact</p>
     </div>
   </div>
 </div>

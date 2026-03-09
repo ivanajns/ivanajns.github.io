@@ -84,7 +84,7 @@ const awards: Award[] = [
       {services.map((service) => (
         <div class="bg-gradient-to-br from-blue-50 to-white p-4 rounded-2xl hover:shadow-lg transition-all duration-300">
           <div class="mb-2">
-            <h4 class="text-base font-medium text-blue-600 mb-1">{service.title}</h4>
+            <h4 class="text-base font-medium mb-1" style="color: #2C2C2E;">{service.title}</h4>
             <a href={service.companyUrl} target="_blank" rel="noopener noreferrer" class="text-sm text-apple-gray-500 hover:text-blue-600 transition-colors">
               {service.company}
             </a>
@@ -137,7 +137,7 @@ const awards: Award[] = [
       {awards.map((award) => (
         <div class="bg-gradient-to-br from-blue-50 to-white p-4 rounded-2xl hover:shadow-lg transition-all duration-300">
           <div class="mb-2">
-            <h4 class="text-base font-medium text-blue-600 mb-1">{award.degree}</h4>
+            <h4 class="text-base font-medium mb-1" style="color: #2C2C2E;">{award.degree}</h4>
             <a href={award.schoolUrl} target="_blank" rel="noopener noreferrer" class="text-sm text-apple-gray-500 hover:text-blue-600 transition-colors">
               {award.school}
             </a>

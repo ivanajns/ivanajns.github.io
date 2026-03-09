@@ -21,7 +21,7 @@ const achievements: Achievement[] = [
 ---
 
 <div class="bg-gradient-to-r from-blue-600 to-blue-800 rounded-2xl p-4 shadow-xl text-white hover:-translate-y-1 hover:shadow-2xl transition-all duration-300">
-  <div class="grid grid-cols-4 gap-4">
+  <div class="grid grid-cols-4 gap-4 items-center">
     {achievements.map((achievement) => (
       <div class="text-center">
         <p class="text-2xl font-bold mb-0.5">{achievement.number}</p>
@@ -29,7 +29,7 @@ const achievements: Achievement[] = [
       </div>
     ))}
     <!-- Contact column -->
-    <div class="text-center border-l border-white/30 pl-4">
+    <div class="text-center border-l border-white/30 pl-4 flex flex-col items-center justify-center">
       <div class="flex justify-center gap-3 mb-2">
           <a href="mailto:ivanajns@gmail.com" target="_blank" rel="noopener noreferrer" class="text-white hover:text-blue-900 transition-colors">
             <span class="sr-only">Email</span>

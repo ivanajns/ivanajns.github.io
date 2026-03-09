@@ -109,7 +109,7 @@ const awards: Award[] = [
 
     <!-- Collapsible images -->
     <div id="service-images" class="overflow-hidden transition-all duration-500" style="max-height: 0;">
-      <div class="flex flex-col sm:flex-row gap-4 pt-8 pb-4 px-4">
+      <div class="flex flex-col sm:flex-row gap-4" style="padding: 2rem 1rem 1.5rem;">
         <button data-modal-img="/img/service-1.jpg" data-modal-target="service-modal" class="flex-1 h-96 cursor-pointer">
           <img
             src="/img/service-1.jpg"
@@ -162,7 +162,7 @@ const awards: Award[] = [
 
     <!-- Collapsible images -->
     <div id="awards-images" class="overflow-hidden transition-all duration-500" style="max-height: 0;">
-      <div class="flex flex-col sm:flex-row gap-4 pt-8 pb-4 px-4">
+      <div class="flex flex-col sm:flex-row gap-4" style="padding: 2rem 1rem 1.5rem;">
         <button data-modal-img="/img/awards-1.jpg" data-modal-target="awards-modal" class="flex-1 h-96 cursor-pointer">
           <img
             src="/img/awards-1.jpg"
@@ -229,7 +229,7 @@ const awards: Award[] = [
     chevron.addEventListener('click', () => {
       isOpen = !isOpen;
       if (isOpen) {
-        images.style.maxHeight = images.scrollHeight + 'px';
+        images.style.maxHeight = '800px';
         icon.style.transform = 'rotate(180deg)';
       } else {
         images.style.maxHeight = '0';

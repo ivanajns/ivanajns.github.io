@@ -13,9 +13,9 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "End-to-End Reporting Automation",
-    description: "The Project Management Power App automates the project intake, management, and review process for the projects teams. It replaces manual processes and disconnected tools with a unified solution that features a refresh of the Power BI dashboard upon data changes, notifications to stakeholders when a project is updated or approved, and a built-in Copilot Virtual Agent for users to get instant answers. This enhances accuracy, timeliness, and communication, significantly improving project management efficiency.",
+    description: "I developed an automated reporting pipeline to process ERP export files used for recurring accounting reports where direct system access was restricted.\nA Power Automate workflow detects new export files and triggers a Python pipeline that processes the data and stores it in SQL Server to preserve historical records that would otherwise be overwritten. I designed the architecture to separate data ingestion, archival storage, and reporting preparation, allowing Power Query–based reports to refresh automatically as new data becomes available.",
     image: "/img/portfolio/mpapp.png",
-    tags: ["Power Apps", "Power Automate", "SharePoint", "Copilot Virtual Agent"],
+    tags: ["Power Automate", "Python", "SQL Server Data Tables", "Power Query", "Excel Reporting"],
     featured: true
   },
   {

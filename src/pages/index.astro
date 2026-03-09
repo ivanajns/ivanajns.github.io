@@ -9,6 +9,7 @@ import ServiceWidget from '../components/ServiceWidget.astro'
 import BlogWidgets from '../components/BlogWidgets.astro'
 import CertsWidget from '../components/CertsWidget.astro'
 import ContactCard from '../components/ContactCard.astro'
+import LocationCard from '../components/LocationCard.astro'
 ---
 
 <Layout title="Ivana Jones — Senior BI Developer & Community Builder">
@@ -21,7 +22,8 @@ import ContactCard from '../components/ContactCard.astro'
           <InfoWidgets />
         </div>
         <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8 items-stretch" data-animate>
-          <div class="md:col-span-3"><AchievementsWidget /></div>
+          <div class="md:col-span-2"><AchievementsWidget /></div>
+          <div class="md:col-span-1"><LocationCard /></div>
           <div class="md:col-span-1"><ContactCard /></div>
         </div>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8" data-animate>

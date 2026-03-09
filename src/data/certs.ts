@@ -1,3 +1,7 @@
+import cert1Src from "../img/cert-1.jpg";
+import cert2Src from "../img/cert-2.jpg";
+import cert3Src from "../img/cert-3.jpg";
+
 export interface Cert {
   id: number;
   title: string;
@@ -10,21 +14,21 @@ export const certs: Cert[] = [
   {
     id: 1,
     title: "Coursera: Google Business Intelligence",
-    image: "/img/cert-1.jpg",
+    image: cert1Src.src,
     url: "https://www.credly.com/badges/df2933f5-516c-4e35-936e-45ecc7862875",
     tags: ["Data Analytics", "Tableau", "Power BI", "SQL"]
   },
   {
     id: 2,
     title: "Python Certified: Associate Data Analyst with Python",
-    image: "/img/cert-2.jpg",
+    image: cert2Src.src,
     url: "https://www.credly.com/badges/d8a70381-6213-4752-a16a-d93fe141e728",
     tags: ["Data Analysis", "Python", "Pandas", "SQL"]
   },
   {
     id: 3,
     title: "CSSC Certified: Lean Six Sigma Green Belt",
-    image: "/img/cert-3.jpg",
+    image: cert3Src.src,
     url: "https://badgr.com/public/assertions/B42VPRpaQV6Vz6WuYFB6ug",
     tags: ["Process Improvement", "Change Management"]
   }

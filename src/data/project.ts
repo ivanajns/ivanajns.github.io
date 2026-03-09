@@ -5,6 +5,7 @@ export const projects: Project[] = [
     id: 1,
     title: "Full-Stack Cloud Analytics",
     description: "I designed and implemented a full-stack analytics workflow that allows business users to submit operational data updates through a Power App interface while maintaining governance over reporting data.\nUser submissions trigger an automated workflow that routes requests for manager approval before a pipeline processes the changes and updates downstream analytics. I structured the system to separate user interaction, approval workflows, data processing, and analytics delivery, ensuring both usability for business teams and reliability for leadership reporting.",
+    results: "Established a governed workflow for operational data updates, ensuring changes were approved before entering reporting systems and automatically reflected in leadership dashboards.\nAutomated the pipeline from request submission to dashboard refresh, improving data reliability while reducing manual coordination across teams.",
     image: "/img/portfolio/mpowerbi.png",
     tags: ["Power Apps", "Power Automate", "Microsoft Fabric Pipelines", "Azure Data Tables", "Power BI"],
     featured: true

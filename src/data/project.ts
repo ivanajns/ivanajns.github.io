@@ -13,7 +13,7 @@ export const projects: Project[] = [
   {
     id: 2,
     title: "End-to-End Reporting Automation",
-    description: "I developed an automated reporting pipeline to process ERP export files used for recurring accounting reports where direct system access was restricted.\nA Power Automate workflow detects new export files and triggers a Python pipeline that processes the data and stores it in SQL Server data tables to preserve historical records that would otherwise be overwritten. I designed the architecture to separate data ingestion, archival storage, and reporting preparation, allowing Power Query–based reports to refresh automatically as new data becomes available.",
+    description: "I developed an automated reporting pipeline to process ERP export files used for recurring accounting reports where direct system access was restricted.\nA Power Automate workflow detects new export files and triggers a Python pipeline that processes the data and stores it in SQL Server data tables to preserve historical records that would otherwise be overwritten. I designed the architecture to separate data ingestion, archival storage, and reporting preparation, allowing Power Query excel reports to refresh automatically as new data becomes available.",
     results: "Automated the ingestion and preparation of ERP export data, eliminating manual report preparation and ensuring consistent refresh of accounting reports.\nIntroduced centralized archival storage and automated transformations, preserving historical data while enabling faster and more reliable reporting.",
     image: "/img/portfolio/mpapp.png",
     tags: ["Power Automate", "Python", "SQL Server Data Tables", "Power Query", "Excel Reporting"],

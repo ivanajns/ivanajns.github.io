@@ -111,7 +111,7 @@ export default function ProjectsGrid({ projects }: Props) {
 
               {/* About this project */}
               <div>
-                <h3 className="text-sm font-semibold text-apple-gray-400 uppercase tracking-wide mb-2">
+                <h3 className="text-sm font-semibold text-apple-gray-500 uppercase tracking-wide mb-2">
                   {activeProject.descriptionLabel ?? 'About This Project'}
                 </h3>
                 <p className="text-gray-600 leading-relaxed text-sm">
@@ -126,7 +126,7 @@ export default function ProjectsGrid({ projects }: Props) {
 
               {/* Results */}
               <div>
-                <h3 className="text-sm font-semibold text-apple-gray-400 uppercase tracking-wide mb-2">
+                <h3 className="text-sm font-semibold text-apple-gray-500 uppercase tracking-wide mb-2">
                   Results
                 </h3>
                 {activeProject.results ? (

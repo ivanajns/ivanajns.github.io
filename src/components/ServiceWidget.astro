@@ -84,12 +84,12 @@ const awards: Award[] = [
       {services.map((service) => (
         <div class="bg-gradient-to-br from-blue-50 to-white p-4 rounded-2xl hover:shadow-lg transition-all duration-300">
           <div class="mb-2">
-            <h4 class="text-base font-medium mb-1" style="color: #2C2C2E;">{service.title}</h4>
-            <a href={service.companyUrl} target="_blank" rel="noopener noreferrer" class="text-sm text-apple-gray-500 hover:text-blue-600 transition-colors">
+            <h4 class="text-base mb-1" style="color: #2563eb; font-weight: 600;">{service.title}</h4>
+            <a href={service.companyUrl} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors" style="color: #86868b; font-size: 13px;">
               {service.company}
             </a>
           </div>
-          <div class="text-apple-gray-400 text-base leading-relaxed space-y-1">
+          <div class="text-apple-gray-400 text-base leading-relaxed space-y-1" style="margin-top: 0.625rem;">
             {service.description.map((item) => (
               <p>{item}</p>
             ))}
@@ -137,12 +137,12 @@ const awards: Award[] = [
       {awards.map((award) => (
         <div class="bg-gradient-to-br from-blue-50 to-white p-4 rounded-2xl hover:shadow-lg transition-all duration-300">
           <div class="mb-2">
-            <h4 class="text-base font-medium mb-1" style="color: #2C2C2E;">{award.degree}</h4>
-            <a href={award.schoolUrl} target="_blank" rel="noopener noreferrer" class="text-sm text-apple-gray-500 hover:text-blue-600 transition-colors">
+            <h4 class="text-base mb-1" style="color: #2563eb; font-weight: 600;">{award.degree}</h4>
+            <a href={award.schoolUrl} target="_blank" rel="noopener noreferrer" class="hover:text-blue-600 transition-colors" style="color: #86868b; font-size: 13px;">
               {award.school}
             </a>
           </div>
-          <div class="text-apple-gray-400 text-base leading-relaxed space-y-1">
+          <div class="text-apple-gray-400 text-base leading-relaxed space-y-1" style="margin-top: 0.625rem;">
             {award.achievements.map((achievement) => (
               <p>{achievement}</p>
             ))}

@@ -46,7 +46,7 @@ const entries: BlogEntry[] = [
       { label: "Ad-hoc Analytics:", text: "High output, zero compounding. Every solution is an island." },
       { label: "Centralized Chaos:", text: "The most dangerous quadrant because it feels like progress. The reorganization happened but the fragmentation didn't move with it." },
       { label: "Engineer-Driven Optimization:", text: "Delivery improves but strategy is still missing. Technical goals and organizational goals are not yet the same thing." },
-      { label: "Strategic Data Architecture:", text: "Data stops being a collection of reporting tools and becomes organizational infrastructure — a strategic asset that compounds over time." },
+      { label: "Strategic Data Architecture:", text: "Data stops being a collection of reporting tools and becomes organizational infrastructure — a strategic asset that compounds over time rather than a source of technical debt." },
       { text: "The goal is not to move fast through these quadrants. The goal is to know which one you are in so you can make intentional decisions about how to move forward." },
     ],
   },

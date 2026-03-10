@@ -1,6 +1,6 @@
-import cert1Src from "../img/cert-1.jpg";
-import cert2Src from "../img/cert-2.jpg";
-import cert3Src from "../img/cert-3.jpg";
+import cert1Src from "../img/cert-1.png";
+import cert2Src from "../img/cert-2.png";
+import cert3Src from "../img/cert-3.png";
 
 export interface Cert {
   id: number;

@@ -1,13 +1,18 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
+interface Para {
+  label?: string;
+  text: string;
+  isTitle?: boolean;
+}
+
 interface BlogEntry {
   id: number;
   title: string;
   type: 'text-only' | 'image-text';
-  paragraphs?: string[];
+  paragraphs: Para[];
   imagePlaceholder?: string;
-  textPlaceholder?: string;
 }
 
 const entries: BlogEntry[] = [
@@ -16,13 +21,14 @@ const entries: BlogEntry[] = [
     title: "The Hidden Cost of Building Without a Blueprint: A Practitioner's Insight",
     type: 'text-only',
     paragraphs: [
-      "Most organizations don't have a data problem. They have a strategy problem that shows up as a data problem.",
-      "I experienced this firsthand. Our team spent years building dashboards and automations embedded across accounting functions delivering strong value add work. Then leadership made a structural move: pull all the data and technology resources out of the business units and consolidate them into a single organization. On paper, it looked like progress.",
-      "But consolidation without strategy is just reorganized chaos.",
-      "The redundancy didn't disappear. The inconsistent solutions didn't get reconciled. The ungoverned data pipelines didn't suddenly align. We were now one team in name, still operating like five teams in practice. And leadership, having made the org change, considered the problem solved.",
-      "This is the hidden cost of building without a blueprint. When organizations accumulate solutions faster than they establish governance, structural changes create the illusion of progress while the underlying fragmentation compounds. You end up with more coordination overhead, more political complexity around who owns what, and less clarity than you had before.",
-      "The answer isn't to stop building. It's to build with architecture in mind from the start — establishing the governance frameworks, ownership models, and consolidation pathways before the accumulation becomes too complex to unwind.",
-      "That is the difference between a data team and a data strategy.",
+      { text: "The Hidden Cost of Building Without a Blueprint: A Practitioner's Insight", isTitle: true },
+      { text: "Most organizations don't have a data problem. They have a strategy problem that shows up as a data problem." },
+      { text: "I experienced this firsthand. Our team spent years building dashboards and automations embedded across accounting functions delivering strong value add work. Then leadership made a structural move: pull all the data and technology resources out of the business units and consolidate them into a single organization. On paper, it looked like progress." },
+      { text: "But consolidation without strategy is just reorganized chaos." },
+      { text: "The redundancy didn't disappear. The inconsistent solutions didn't get reconciled. The ungoverned data pipelines didn't suddenly align. We were now one team in name, still operating like five teams in practice. And leadership, having made the org change, considered the problem solved." },
+      { text: "This is the hidden cost of building without a blueprint. When organizations accumulate solutions faster than they establish governance, structural changes create the illusion of progress while the underlying fragmentation compounds. You end up with more coordination overhead, more political complexity around who owns what, and less clarity than you had before." },
+      { text: "The answer isn't to stop building. It's to build with architecture in mind from the start — establishing the governance frameworks, ownership models, and consolidation pathways before the accumulation becomes too complex to unwind." },
+      { text: "That is the difference between a data team and a data strategy." },
     ],
   },
   {
@@ -30,14 +36,31 @@ const entries: BlogEntry[] = [
     title: "Architecture Over Accumulation: A Fragmentation Matrix",
     type: 'image-text',
     imagePlaceholder: 'INSERT MATRIX IMAGE HERE',
-    textPlaceholder: 'INSERT MATRIX TEXT HERE',
+    paragraphs: [
+      { text: "Architecture Over Accumulation: A Fragmentation Matrix", isTitle: true },
+      { text: "Most data teams don't fail because they lack talent. They fail because they accumulate solutions faster than they establish systems." },
+      { text: "This matrix maps where organizations actually are versus where they think they are, plotted across two dimensions: how intentionally they are building and how broadly their solutions serve the organization." },
+      { label: "Ad-hoc Analytics", text: "High output, zero compounding. Every solution is an island." },
+      { label: "Centralized Chaos", text: "The most dangerous quadrant because it feels like progress. The reorganization happened but the fragmentation didn't move with it." },
+      { label: "Engineer-Driven Optimization", text: "Delivery improves but strategy is still missing. Technical goals and organizational goals are not yet the same thing." },
+      { label: "Strategic Data Architecture", text: "Data stops being a collection of reporting tools and becomes organizational infrastructure — a strategic asset that compounds over time." },
+      { text: "The goal is not to move fast through these quadrants. The goal is to know which one you are in." },
+    ],
   },
   {
     id: 3,
     title: "From Silos to Systems: A Practical Data Maturity Path",
     type: 'image-text',
     imagePlaceholder: 'INSERT MATURITY CURVE IMAGE HERE',
-    textPlaceholder: 'INSERT MATURITY CURVE TEXT HERE',
+    paragraphs: [
+      { text: "From Silos to Systems: A Practical Data Maturity Path", isTitle: true },
+      { text: "Most organizations don't plan their way into data maturity. They stumble through it — reacting to pain, reorganizing around symptoms, and mistaking operational changes for strategic ones." },
+      { label: "Stage 1 — Reporting Tools", text: "Insights exist but they are fragmented. This stage feels sufficient until it doesn't." },
+      { label: "Stage 2 — Automation", text: "Operations improve but architecture is still undefined. The foundation is getting stronger without anyone agreeing on what to build on top of it." },
+      { label: "Stage 3 — Consolidation", text: "Alignment is announced but the underlying solutions were never reconciled. This is where most organizations stall." },
+      { label: "Stage 4 — Governance and Architecture", text: "Tools begin serving the architecture instead of the other way around. This stage requires organizational will as much as technical capability." },
+      { label: "Stage 5 — Decision Intelligence", text: "Data is no longer a reporting function. It is organizational infrastructure." },
+    ],
   },
 ];
 
@@ -128,28 +151,23 @@ export default function BlogGrid() {
               </div>
             )}
 
-            {/* Modal content */}
-            <div className="p-6 space-y-5">
-
-              {/* Text-only entry: clean paragraphs, no headers */}
-              {activeEntry.type === 'text-only' && activeEntry.paragraphs && (
-                <div className="space-y-4">
-                  {activeEntry.paragraphs.map((para, i) => (
-                    <p key={i} className="text-gray-600 leading-relaxed text-sm">
-                      {para}
-                    </p>
-                  ))}
-                </div>
-              )}
-
-              {/* Image-text entry: body text placeholder, no headers */}
-              {activeEntry.type === 'image-text' && (
-                <div>
-                  {/* INSERT MATRIX TEXT HERE (entry 2) / INSERT MATURITY CURVE TEXT HERE (entry 3) */}
-                  <p className="text-blue-300 text-sm font-mono">{activeEntry.textPlaceholder}</p>
-                </div>
-              )}
-
+            {/* Modal content — clean paragraphs, no headers */}
+            <div className="p-6 space-y-4">
+              {activeEntry.paragraphs.map((para, i) => (
+                <p
+                  key={i}
+                  className={
+                    para.isTitle
+                      ? "text-gray-800 font-medium text-base leading-snug"
+                      : "text-gray-600 leading-relaxed text-sm"
+                  }
+                >
+                  {para.label && (
+                    <strong className="text-gray-700">{para.label} </strong>
+                  )}
+                  {para.text}
+                </p>
+              ))}
             </div>
           </div>
         </div>,

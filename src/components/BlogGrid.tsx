@@ -51,11 +51,11 @@ const entries: BlogEntry[] = [
   },
   {
     id: 3,
-    title: "From Silos to Systems: A Practical Data Maturity Path",
+    title: "From Silos to Systems: A Data Maturity Curve",
     type: 'image-text',
     imagePlaceholder: 'INSERT MATURITY CURVE IMAGE HERE',
     paragraphs: [
-      { text: "From Silos to Systems: A Practical Data Maturity Path", isTitle: true },
+      { text: "From Silos to Systems: A Data Maturity Curve", isTitle: true },
       { text: "Most organizations don't plan their way into data maturity. They stumble through it — reacting to pain, reorganizing around symptoms, and mistaking operational changes for strategic ones." },
       { label: "Stage 1: Reporting Tools", text: "Insights exist but they are fragmented. This stage feels sufficient until it doesn't." },
       { label: "Stage 2: Automation", text: "Operations improve but architecture is still undefined. The foundation is getting stronger without anyone agreeing on what to build on top of it." },

@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 import strategic1Src from '../img/strategic-1.png';
+import strategic2Src from '../img/strategic-2.png';
 
 interface Para {
   label?: string;
@@ -53,7 +54,7 @@ const entries: BlogEntry[] = [
     id: 3,
     title: "From Silos to Systems: A Data Maturity Curve",
     type: 'image-text',
-    imagePlaceholder: 'INSERT MATURITY CURVE IMAGE HERE',
+    image: strategic2Src.src,
     paragraphs: [
       { text: "From Silos to Systems: A Data Maturity Curve", isTitle: true },
       { text: "Most organizations don't plan their way into data maturity. They stumble through it — reacting to pain, reorganizing around symptoms, and mistaking operational changes for strategic ones." },

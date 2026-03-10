@@ -18,10 +18,10 @@ interface BlogEntry {
 const entries: BlogEntry[] = [
   {
     id: 1,
-    title: "The Hidden Cost of Building Without a Blueprint: A Practitioner's Insight",
+    title: "The Hidden Cost of Building Analytics Without a Blueprint: A Practitioner's Insight",
     type: 'text-only',
     paragraphs: [
-      { text: "The Hidden Cost of Building Without a Blueprint: A Practitioner's Insight", isTitle: true },
+      { text: "The Hidden Cost of Building Analytics Without a Blueprint: A Practitioner's Insight", isTitle: true },
       { text: "Most organizations don't have a data problem. They have a strategy problem that shows up as a data problem." },
       { text: "I experienced this firsthand. Our team spent years building dashboards and automations embedded across accounting functions delivering strong value add work. Then leadership made a structural move: pull all the data and technology resources out of the business units and consolidate them into a single organization. On paper, it looked like progress." },
       { text: "But consolidation without strategy is just reorganized chaos." },
@@ -33,11 +33,11 @@ const entries: BlogEntry[] = [
   },
   {
     id: 2,
-    title: "Architecture Over Accumulation: A Fragmentation Matrix",
+    title: "Architecture Over Accumulation: A Data Fragmentation Matrix",
     type: 'image-text',
     imagePlaceholder: 'INSERT MATRIX IMAGE HERE',
     paragraphs: [
-      { text: "Architecture Over Accumulation: A Fragmentation Matrix", isTitle: true },
+      { text: "Architecture Over Accumulation: A Data Fragmentation Matrix", isTitle: true },
       { text: "Most data teams don't fail because they lack talent. They fail because they accumulate solutions faster than they establish systems." },
       { text: "This matrix maps where organizations actually are versus where they think they are, plotted across two dimensions: how intentionally they are building and how broadly their solutions serve the organization." },
       { label: "Ad-hoc Analytics:", text: "High output, zero compounding. Every solution is an island." },

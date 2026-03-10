@@ -47,7 +47,7 @@ const entries: BlogEntry[] = [
       { label: "Centralized Chaos:", text: "The most dangerous quadrant because it feels like progress. The reorganization happened but the fragmentation didn't move with it." },
       { label: "Engineer-Driven Optimization:", text: "Delivery improves but strategy is still missing. Technical goals and organizational goals are not yet the same thing." },
       { label: "Strategic Data Architecture:", text: "Data stops being a collection of reporting tools and becomes organizational infrastructure — a strategic asset that compounds over time." },
-      { text: "The goal is not to move fast through these quadrants. The goal is to know which one you are in." },
+      { text: "The goal is not to move fast through these quadrants. The goal is to know which one you are in so you can make intentional decisions about how to move forward." },
     ],
   },
   {
@@ -63,6 +63,7 @@ const entries: BlogEntry[] = [
       { label: "Stage 3: Consolidation", text: "Alignment is announced but the underlying solutions were never reconciled. This is where most organizations stall." },
       { label: "Stage 4: Governance and Architecture", text: "Tools begin serving the architecture instead of the other way around. This stage requires organizational will as much as technical capability." },
       { label: "Stage 5: Decision Intelligence", text: "Data is no longer a reporting function. It is organizational infrastructure." },
+      { text: "The gap between Stage 3 and Stage 4 is where most enterprise data transformations fail. Crossing it requires more than technical investment — it requires strategic clarity about what you are building toward and why." },
     ],
   },
 ];

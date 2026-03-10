@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { createPortal } from 'react-dom';
+import strategic1Src from '../img/strategic-1.png';
 
 interface Para {
   label?: string;
@@ -12,6 +13,7 @@ interface BlogEntry {
   title: string;
   type: 'text-only' | 'image-text';
   paragraphs: Para[];
+  image?: string;
   imagePlaceholder?: string;
 }
 
@@ -35,7 +37,7 @@ const entries: BlogEntry[] = [
     id: 2,
     title: "Architecture Over Accumulation: A Data Fragmentation Matrix",
     type: 'image-text',
-    imagePlaceholder: 'INSERT MATRIX IMAGE HERE',
+    image: strategic1Src.src,
     paragraphs: [
       { text: "Architecture Over Accumulation: A Data Fragmentation Matrix", isTitle: true },
       { text: "Most data teams don't fail because they lack talent. They fail because they accumulate solutions faster than they establish systems." },
@@ -143,12 +145,22 @@ export default function BlogGrid() {
               </svg>
             </button>
 
-            {/* Image placeholder — only for image-text entries */}
+            {/* Image section — only for image-text entries */}
             {activeEntry.type === 'image-text' && (
-              <div className="w-full overflow-hidden rounded-t-3xl bg-blue-50 min-h-[200px] flex items-center justify-center">
-                {/* INSERT MATRIX IMAGE HERE (entry 2) / INSERT MATURITY CURVE IMAGE HERE (entry 3) */}
-                <p className="text-blue-300 text-sm font-mono">{activeEntry.imagePlaceholder}</p>
-              </div>
+              activeEntry.image ? (
+                <div className="w-full overflow-hidden rounded-t-3xl bg-blue-50">
+                  <img
+                    src={activeEntry.image}
+                    alt={activeEntry.title}
+                    className="w-full h-auto object-contain"
+                  />
+                </div>
+              ) : (
+                <div className="w-full overflow-hidden rounded-t-3xl bg-blue-50 min-h-[200px] flex items-center justify-center">
+                  {/* INSERT MATURITY CURVE IMAGE HERE (entry 3) */}
+                  <p className="text-blue-300 text-sm font-mono">{activeEntry.imagePlaceholder}</p>
+                </div>
+              )
             )}
 
             {/* Modal content — clean paragraphs, no headers */}

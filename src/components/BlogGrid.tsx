@@ -55,11 +55,11 @@ const entries: BlogEntry[] = [
     paragraphs: [
       { text: "From Silos to Systems: A Practical Data Maturity Path", isTitle: true },
       { text: "Most organizations don't plan their way into data maturity. They stumble through it — reacting to pain, reorganizing around symptoms, and mistaking operational changes for strategic ones." },
-      { label: "Stage 1 — Reporting Tools", text: "Insights exist but they are fragmented. This stage feels sufficient until it doesn't." },
-      { label: "Stage 2 — Automation", text: "Operations improve but architecture is still undefined. The foundation is getting stronger without anyone agreeing on what to build on top of it." },
-      { label: "Stage 3 — Consolidation", text: "Alignment is announced but the underlying solutions were never reconciled. This is where most organizations stall." },
-      { label: "Stage 4 — Governance and Architecture", text: "Tools begin serving the architecture instead of the other way around. This stage requires organizational will as much as technical capability." },
-      { label: "Stage 5 — Decision Intelligence", text: "Data is no longer a reporting function. It is organizational infrastructure." },
+      { label: "Stage 1: Reporting Tools", text: "Insights exist but they are fragmented. This stage feels sufficient until it doesn't." },
+      { label: "Stage 2: Automation", text: "Operations improve but architecture is still undefined. The foundation is getting stronger without anyone agreeing on what to build on top of it." },
+      { label: "Stage 3: Consolidation", text: "Alignment is announced but the underlying solutions were never reconciled. This is where most organizations stall." },
+      { label: "Stage 4: Governance and Architecture", text: "Tools begin serving the architecture instead of the other way around. This stage requires organizational will as much as technical capability." },
+      { label: "Stage 5: Decision Intelligence", text: "Data is no longer a reporting function. It is organizational infrastructure." },
     ],
   },
 ];

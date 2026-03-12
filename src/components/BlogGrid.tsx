@@ -63,7 +63,7 @@ const entries: BlogEntry[] = [
       { label: "Stage 3: Consolidation", text: "Alignment is announced but the underlying solutions were never reconciled. This is where most organizations stall." },
       { label: "Stage 4: Governance and Architecture", text: "Tools begin serving the architecture instead of the other way around. This stage requires organizational will as much as technical capability." },
       { label: "Stage 5: Decision Intelligence", text: "Data is no longer a reporting function. It is organizational infrastructure." },
-      { text: "The gap between Stage 3 and Stage 4 is where most enterprise data transformations fail. Crossing it requires more than technical investment — it requires strategic clarity about what you are building toward and why." },
+      { text: "The gap between Stage 3 and Stage 4 is where most enterprise data transformations fail. Crossing it requires more than technical investment — it requires strategic clarity about the stage you are currently in, what you are building toward, and how you are going to get there." },
     ],
   },
 ];

@@ -45,7 +45,7 @@ const entries: BlogEntry[] = [
       { text: "This matrix maps where organizations actually are versus where they think they are, plotted across two dimensions: how intentionally they are building and how broadly their solutions serve the organization." },
       { label: "Ad-hoc Analytics:", text: "High output, zero compounding. An inventory of local dashboards solving local problems." },
       { label: "Centralized Chaos:", text: "The most dangerous quadrant because it feels like progress. The reorganization happened but the fragmentation is still unresolved and creating mass confusion." },
-      { label: "Engineer-Driven Optimization:", text: "Delivery improves but strategy is still missing. Technical goals and organizational goals are not yet the same thing." },
+      { label: "Engineer-Driven Optimization:", text: "Delivery improves but strategy is still missing. Technical goals and organizational goals are not yet in alignment." },
       { label: "Strategic Data Architecture:", text: "Data stops being a collection of reporting tools and becomes organizational infrastructure — a strategic asset that compounds over time rather than a source of technical debt." },
       { text: "The goal is not to move fast through these quadrants. The goal is to know which one you are in so you can make intentional decisions about how to move forward." },
     ],

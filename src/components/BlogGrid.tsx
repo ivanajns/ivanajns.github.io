@@ -43,7 +43,7 @@ const entries: BlogEntry[] = [
       { text: "Architecture Over Accumulation: A Data Fragmentation Matrix", isTitle: true },
       { text: "Most data teams don't fail because they lack talent. They fail because they accumulate solutions faster than they establish systems." },
       { text: "This matrix maps where organizations actually are versus where they think they are, plotted across two dimensions: how intentionally they are building and how broadly their solutions serve the organization." },
-      { label: "Ad-hoc Analytics:", text: "High output, zero compounding. Every solution is an island." },
+      { label: "Ad-hoc Analytics:", text: "High output, zero compounding. An inventory of local dashboards solving local problems." },
       { label: "Centralized Chaos:", text: "The most dangerous quadrant because it feels like progress. The reorganization happened but the fragmentation didn't move with it." },
       { label: "Engineer-Driven Optimization:", text: "Delivery improves but strategy is still missing. Technical goals and organizational goals are not yet the same thing." },
       { label: "Strategic Data Architecture:", text: "Data stops being a collection of reporting tools and becomes organizational infrastructure — a strategic asset that compounds over time rather than a source of technical debt." },

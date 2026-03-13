@@ -24,7 +24,7 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Executive Presentation",
+    title: "Executive Business Value Presentation",
     descriptionLabel: "About This Presentation",
     description: "I presented to the Accounting Division's VP and CFO at my department's Tech Innovation Forum. I demonstrated an automation solution I developed to streamline a finance workflow, quantified its operational impact, and outlined the approach used to identify high-value automation opportunities within accounting processes.",
     results: "Equipped leadership with a clear view of the ROI and operational benefits of targeted automation, and introduced a practical approach for evaluating and prioritizing future finance process improvements.",

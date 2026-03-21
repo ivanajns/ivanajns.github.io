@@ -30,6 +30,6 @@ export const certs: Cert[] = [
     title: "CSSC Certified: Lean Six Sigma Green Belt",
     image: cert3Src.src,
     url: "https://badgr.com/public/assertions/B42VPRpaQV6Vz6WuYFB6ug",
-    tags: ["Process Improvement", "Change Management"]
+    tags: ["Structured problem-solving", "Process Improvement", "Change Management"]
   }
 ];

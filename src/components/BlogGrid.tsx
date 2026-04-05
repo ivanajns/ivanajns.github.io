@@ -21,10 +21,10 @@ interface BlogEntry {
 const entries: BlogEntry[] = [
 {
   id: 1,
-  title: "Most Data Problems Are Strategy Problems",
+  title: "Most Data Problems Are Strategy Problems: A Practitioner's Insight",
   type: 'text-only',
   paragraphs: [
-    { text: "Most Data Problems Are Strategy Problems", isTitle: true },
+    { text: "Most Data Problems Are Strategy Problems: A Practitioner's Insight", isTitle: true },
     { text: "Most organizations don't have a data problem. They have a strategy problem that eventually shows up in their data." },
     { text: "I saw this firsthand. For years, our team was embedded within the accounting organization, building dashboards and automations that delivered real business value. The work was impactful, the stakeholders were satisfied, and from the outside, it looked like the data function was working." },
     { text: "Then leadership made a structural decision: centralize all data and technology resources into a single organization. On paper, it looked like progress." },
@@ -57,7 +57,8 @@ const entries: BlogEntry[] = [
 {
   id: 3,
   title: "From Silos to Systems: A Data Maturity Curve",
-  type: 'text-only',
+  type: 'image-text',
+  image: strategic2Src.src,
   paragraphs: [
     { text: "From Silos to Systems: A Data Maturity Curve", isTitle: true },
     { text: "Most organizations don't plan their way into data maturity. They react to pain, reorganize around symptoms, and mistake operational improvements for strategic progress." },

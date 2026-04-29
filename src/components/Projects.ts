@@ -10,7 +10,7 @@ export const projects: Project[] = [
     description: "",
     results: "",
     image: project3Src.src,
-    tags: ["dbt", "Snowflake", "Data Modeling", "Kimball", "Data Warehouse", "Transformation Layer", "ELT", "SQL"],
+    tags: ["dbt", "Snowflake", "Data Modeling", "Kimball", "SQL", "Data Warehouse", "Transformation Layer", "ELT"],
     featured: true
   },
   {

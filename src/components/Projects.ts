@@ -6,30 +6,29 @@ import project3Src from "../img/project-3.png";
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Full-Stack Cloud Analytics Workflow",
-    description: "I designed and implemented a full-stack analytics workflow that allows business users to submit operational data updates through a Power App interface while maintaining governance over reporting data.\nUser submissions trigger an automated workflow that routes requests for manager approval before a pipeline processes the changes to the Azure data tables and updates downstream analytics. I structured the system to separate user interaction, approval workflows, data processing, and analytics delivery, ensuring both usability for business teams and reliability for leadership reporting.",
-    results: "Established a governed workflow for operational data updates, ensuring changes were approved before entering reporting systems and automatically reflected in leadership dashboards.\nAutomated the pipeline from request submission to dashboard refresh, improving data reliability while reducing manual coordination across teams.",
-    image: project1Src.src,
-    tags: ["Power Apps", "Dataverse", "Power Automate", "Power BI", "Microsoft Fabric Pipelines", "Azure Data Tables", "SQL"],
+    title: "Analytics Engineering Github",
+    description: "",
+    results: "",
+    image: project3Src.src,
+    tags: ["dbt", "Snowflake", "Data Modeling", "Data Warehouse", "Transformation Layer", "ELT", "SQL"],
     featured: true
   },
   {
     id: 2,
-    title: "End-to-End Automated Reporting Pipeline",
-    description: "I developed an automated reporting pipeline to process ERP export files used for recurring accounting reports where direct system access was restricted.\nA Power Automate workflow detects new export files and triggers a Python pipeline that processes the data and stores it in SQL Server data tables to preserve historical records that would otherwise be overwritten. I designed the architecture to separate data ingestion, archival storage, and reporting preparation, allowing Power Query excel reports to refresh automatically as new data becomes available.",
-    results: "Automated the ingestion and preparation of ERP export data, eliminating manual report preparation and ensuring consistent refresh of accounting reports.\nIntroduced centralized archival storage and automated transformations, preserving historical data while enabling faster and more reliable reporting.",
+    title: "Snowflake Migration & Data Impact Analysis Agent",
+    description: "I supported the migration of 50+ Power BI and Power Platform solutions from SQL Server to Snowflake across accounting and ERP workflows. During the transition, I refactored SQL logic, rebuilt data connections, and helped resolve an authentication issue that would have broken unattended automations in the new environment. To reduce downstream risk, I also designed a dependency-aware data impact analysis agent in Copilot Studio that helps users understand how tables, reports, and workflows are connected.",
+    results: "Helped preserve reporting and automation continuity during a high-impact platform migration while improving visibility into upstream and downstream dependencies. The project also exposed how much business logic was duplicated across reporting and workflow tools, which led me to begin building reusable Snowflake views to centralize transformation logic and reduce future migration risk.",
     image: project2Src.src,
-    tags: ["Power Automate", "Python", "SQL Server Data Tables", "Power Query", "Excel Reporting"],
+    tags: ["Snowflake", "Copilot Studio AI Agent", "Data Migration", "SQL Refactoring", "Pipeline Dependencies", "Impact Analysis"],
     featured: true
   },
   {
     id: 3,
-    title: "Executive Business Value Presentation",
-    descriptionLabel: "About This Presentation",
-    description: "I presented to the Accounting Division's VP and CFO at my department's Tech Innovation Forum. I demonstrated an automation solution I developed to streamline a finance workflow, quantified its operational impact, and outlined the approach used to identify high-value automation opportunities within accounting processes.",
-    results: "Equipped leadership with a clear view of the ROI and operational benefits of targeted automation, and introduced a practical approach for evaluating and prioritizing future finance process improvements.",
-    image: project3Src.src,
-    tags: ["Finance Process Optimization", "Operational Efficiency", "ROI Analysis", "Data & Automation Strategy"],
+    title: "End-to-end Cloud Finance Analytics Dashboard",
+    description: "I designed and implemented a full-stack analytics workflow that processes excel SAP ERP exports for recurring accounting reports where direct system access was restricted. A Power Automate workflow detects new export files and triggers a Python pipeline that processes the data and stores it in Azure SQL data tables to preserve historical records that would otherwise be overwritten. A Fabric dataflow then standardizes ingestion and transformation into analytics-ready datasets for dashboards and excel reporting. I designed the architecture to separate data ingestion, archival storage, and reporting preparation, allowing Power BI to refresh automatically as new data becomes available.",
+    results: "Automated the ingestion and preparation of SAP ERP export data, eliminating manual report preparation and ensuring consistent refresh of accounting reports. Introduced centralized archival storage and automated transformations, preserving historical data while enabling faster and more reliable reporting.",
+    image: project1Src.src,
+    tags: ["Power Platform", "Python", "Azure SQL Data Tables", "Microsoft Fabric Pipelines", "Power Query", "Power BI"],
     featured: true
   }
 ];

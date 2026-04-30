@@ -15,7 +15,7 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Snowflake Migration & Data Impact Analysis Agent",
+    title: "Snowflake Migration & Data Impact Agent",
     description: "I supported the migration of 50+ Power BI and Power Platform solutions from SQL Server to Snowflake across accounting and ERP workflows. During the transition, I refactored SQL logic, rebuilt data connections, and helped resolve an authentication issue that would have broken unattended automations in the new environment. To reduce downstream risk, I also designed a dependency-aware data impact analysis agent in Copilot Studio that helps users understand how tables, reports, and workflows are connected.",
     results: "Helped preserve reporting and automation continuity during a high-impact platform migration while improving visibility into upstream and downstream dependencies. The project also exposed how much business logic was duplicated across reporting and workflow tools, which led me to begin building reusable Snowflake views to centralize transformation logic and reduce future migration risk.",
     image: project2Src.src,

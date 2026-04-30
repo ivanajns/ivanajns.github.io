@@ -32,41 +32,85 @@ export default function ProjectsGrid({ projects }: Props) {
     <>
       {/* Card grid */}
       <div className="grid gap-4">
-        {projects.map((project) => (
-          <button
-            key={project.id}
-            onClick={() => setActiveProject(project)}
-            className="w-full text-left bg-gradient-to-br from-blue-50 to-white p-4 rounded-2xl hover:shadow-lg transition-all duration-300 group"
-          >
-            <div className="flex items-start gap-4">
-              <img
-                src={project.image}
-                alt={project.title}
-                className="w-16 h-16 rounded-xl object-cover flex-shrink-0"
-              />
-              <div className="flex-1 min-w-0">
-                <h4 className="text-base font-medium text-blue-600 mb-3 group-hover:text-blue-800 transition-colors leading-snug">
-                  {project.title}
-                </h4>
-                <div className="flex flex-wrap gap-1">
-                  {project.tags.map((tag) => (
-                    <span
-                      key={tag}
-                      className="px-2 py-0.5 bg-blue-100 text-blue-900 rounded-full text-xs"
-                    >
-                      {tag}
-                    </span>
-                  ))}
+        {projects.map((project) => {
+          if (project.id === 1) {
+            return (
+              <a
+                key={project.id}
+                href="https://github.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-disabled="true"
+                onClick={(e) => e.preventDefault()}
+                className="w-full text-left bg-gradient-to-br from-blue-50 to-white p-4 rounded-2xl hover:shadow-lg transition-all duration-300 group opacity-60 cursor-not-allowed pointer-events-none"
+              >
+                <div className="flex items-start gap-4">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-16 h-16 rounded-xl object-cover flex-shrink-0"
+                  />
+                  <div className="flex-1 min-w-0">
+                    <h4 className="text-base font-medium text-blue-600 mb-3 group-hover:text-blue-800 transition-colors leading-snug">
+                      {project.title}
+                    </h4>
+                    <div className="flex flex-wrap gap-1">
+                      {project.tags.map((tag) => (
+                        <span
+                          key={tag}
+                          className="px-2 py-0.5 bg-blue-100 text-blue-900 rounded-full text-xs"
+                        >
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                  <div className="flex-shrink-0 text-blue-300 group-hover:text-blue-500 transition-colors">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                    </svg>
+                  </div>
+                </div>
+              </a>
+            );
+          }
+
+          return (
+            <button
+              key={project.id}
+              onClick={() => setActiveProject(project)}
+              className="w-full text-left bg-gradient-to-br from-blue-50 to-white p-4 rounded-2xl hover:shadow-lg transition-all duration-300 group"
+            >
+              <div className="flex items-start gap-4">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="w-16 h-16 rounded-xl object-cover flex-shrink-0"
+                />
+                <div className="flex-1 min-w-0">
+                  <h4 className="text-base font-medium text-blue-600 mb-3 group-hover:text-blue-800 transition-colors leading-snug">
+                    {project.title}
+                  </h4>
+                  <div className="flex flex-wrap gap-1">
+                    {project.tags.map((tag) => (
+                      <span
+                        key={tag}
+                        className="px-2 py-0.5 bg-blue-100 text-blue-900 rounded-full text-xs"
+                      >
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+                <div className="flex-shrink-0 text-blue-300 group-hover:text-blue-500 transition-colors">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+                  </svg>
                 </div>
               </div>
-              <div className="flex-shrink-0 text-blue-300 group-hover:text-blue-500 transition-colors">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-4 h-4">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
-                </svg>
-              </div>
-            </div>
-          </button>
-        ))}
+            </button>
+          );
+        })}
       </div>
 
       {/* Modal overlay — rendered via portal to escape any parent stacking context */}

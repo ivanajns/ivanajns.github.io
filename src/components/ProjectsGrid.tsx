@@ -37,12 +37,10 @@ export default function ProjectsGrid({ projects }: Props) {
             return (
               <a
                 key={project.id}
-                href="https://github.com"
+                // href="https://github.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-disabled="true"
-                onClick={(e) => e.preventDefault()}
-                className="w-full text-left bg-gradient-to-br from-blue-50 to-white p-4 rounded-2xl hover:shadow-lg transition-all duration-300 group opacity-60 cursor-not-allowed pointer-events-none"
+                className="w-full text-left bg-gradient-to-br from-blue-50 to-white p-4 rounded-2xl hover:shadow-lg transition-all duration-300 group"
               >
                 <div className="flex items-start gap-4">
                   <img

@@ -44,7 +44,7 @@ const entries: BlogEntry[] = [
     { label: "Accumulated Fragmentation:", text: "Output scales faster than standards. Multiple teams solve similar problems in parallel, definitions drift, and overlapping transformation logic emerges across tools and functions." },
     { label: "Centralized Platform, Distributed Logic:", text: "This is the deceptive stage. Infrastructure appears more mature because the organization has consolidated systems or adopted a modern warehouse, but business logic still lives downstream across reporting, automation, and analyst-built transformations. Coordination cost stays high even as the platform modernizes." },
     { label: "Shared Transformation Architecture:", text: "Transformation logic becomes an institutional asset rather than a local artifact. Core business rules are centralized, reusable, easier to test, easier to document, and easier to update once instead of many times." },
-    { text: "Many organizations mistake platform centralization for transformation maturity. In practice, maturity depends less on where data is stored than on where business logic is allowed to live." },
+    { text: "For many organziations, maturity depends less on where data is stored than on where business logic is allowed to live." },
   ],
 },
 {
@@ -60,7 +60,7 @@ const entries: BlogEntry[] = [
     { label: "Stage 3: Platform Consolidation", text: "The organization introduces a more unified data platform, but logic remains distributed. Infrastructure improves faster than transformation design, so operational fragility persists beneath the new architecture." },
     { label: "Stage 4: Shared Transformation Layer", text: "The organization starts moving repeatable business logic upstream into reusable models, views, or modular transformations. Delivery becomes thinner downstream and more consistent across use cases." },    
     { label: "Stage 5: Transformation as Institutional Infrastructure", text: "Transformation logic is treated as a governed, evolving asset of the enterprise: versioned, tested, documented, reusable, and designed to support both analytics and operational consumption at scale." },
-    { text: "The decisive transition in data maturity is not from legacy platforms to modern platforms. It is from scattered transformation logic to shared transformation infrastructure." },
+    { text: "The decisive transition in data maturity is from scattered transformation logic to shared transformation infrastructure." },
   ],
 },
 ];

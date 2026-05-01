@@ -24,7 +24,7 @@ const entries: BlogEntry[] = [
   title: "Most Data Problems Are Transformation Problems: A Practitioner's Insight",
   type: 'text-only',
   paragraphs: [
-    { text: "Most Data Problems Are Architecture Problems: A Practitioner's Insight", isTitle: true },
+    { text: "Most Data Problems Are Transformation Problems: A Practitioner's Insight", isTitle: true },
     { text: "Most organizations do not have a data problem in the way they think they do. They have a transformation problem that quietly governs how data moves, how logic is defined, and how operational knowledge is distributed across the business." },
     { text: "For a long time, that problem can remain invisible. Teams continue shipping dashboards, automations, extracts, and reporting layers that create real value. From the outside, the function looks productive. In reality, transformation logic is often accumulating across tools faster than the organization is standardizing, documenting, and governing it." },
     { text: "That distinction matters. Once transformation logic is embedded across reporting tools, scripts, local queries, and workflow automations, scale begins to create the appearance of maturity while actually increasing coordination cost. The organization produces more output, but every new initiative inherits more hidden dependencies, more duplicated business rules, and more reconciliation overhead." },

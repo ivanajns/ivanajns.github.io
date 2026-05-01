@@ -28,15 +28,17 @@ const entries: BlogEntry[] = [
 
   { text: "Most organizations do not have a data problem in the way they think they do. They have a transformation problem — one that quietly shapes how data moves, how logic is defined, and how operational knowledge is distributed across the enterprise.", isLead: true },
 
-  { label: "Why it stays hidden", text: "For a long time, that problem can remain invisible. Teams continue shipping dashboards, automations, extracts, and reporting layers that create real value. From the outside, the function looks productive. In reality, transformation logic is often accumulating across tools faster than the organization is standardizing, documenting, and governing it." },
+  { label: "Why it stays hidden" },
+  { text: "For a long time, that problem can remain invisible. Teams continue shipping dashboards, automations, extracts, and reporting layers that create real value. From the outside, the function looks productive. In reality, transformation logic is often accumulating across tools faster than the organization is standardizing, documenting, and governing it." },
 
-  { label: "Why that matters", text: "Once transformation logic is embedded across reporting tools, scripts, local queries, and workflow automations, scale begins to create the appearance of maturity while actually increasing coordination cost. The organization produces more output, but every new initiative inherits more hidden dependencies, more duplicated business rules, and more reconciliation overhead." },
+  { label: "Why that matters" },
+  { text: "Once transformation logic is embedded across reporting tools, scripts, local queries, and workflow automations, scale begins to create the appearance of maturity while actually increasing coordination cost. The organization produces more output, but every new initiative inherits more hidden dependencies, more duplicated business rules, and more reconciliation overhead." },
 
-  { label: "What exposed it", text: "I saw this most clearly when structural and platform changes exposed how much logic had been distributed across the delivery layer. What looked like a systems transition was really a visibility event: the underlying issue was not infrastructure alone, but the absence of a shared transformation layer." },
+  { label: "What exposed it" },
+  { text: "I saw this most clearly when structural and platform changes exposed how much logic had been distributed across the delivery layer. What looked like a systems transition was really a visibility event: the underlying issue was not infrastructure alone, but the absence of a shared transformation layer." },
 
-  { label: "What maturity actually means", text: "That is why I increasingly see analytics maturity not as a function of dashboards produced or platforms adopted, but of whether transformation logic is reusable, governed, and intentionally designed to compound across the enterprise." },
-
-  { text: "Maturity is not just centralized infrastructure. It is shared transformation logic designed to scale.", isCallout: true },
+  { label: "What maturity actually means" },
+  { text: "That is why I increasingly see analytics maturity not as a function of dashboards produced or platforms adopted, but of whether transformation logic is reusable, governed, and intentionally designed to compound across the enterprise." },
   ],
 },
 {

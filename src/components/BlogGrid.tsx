@@ -53,7 +53,7 @@ const entries: BlogEntry[] = [
 },
 {
   id: 3,
-  title: "From Silos to Systems: A Data Maturity Curve",
+  title: "From Silos to Systems: A Transformation Maturity Curve",
   type: 'image-text',
   image: strategic2Src.src,
   paragraphs: [

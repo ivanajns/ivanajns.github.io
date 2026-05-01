@@ -60,8 +60,8 @@ const entries: BlogEntry[] = [
   type: 'image-text',
   image: strategic2Src.src,
   paragraphs: [
-    { text: "From Silos to Systems: A Data Maturity Curve", isTitle: true },
-    { text: "Data maturity in real enterprise environments is rarely linear. It is usually a sequence of partial fixes that only become transformational when the underlying infrastructure is finally consolidated." },
+    { text: "From Silos to Systems: A Transformation Maturity Curve", isTitle: true },
+    { text: "Transformation maturity in real enterprise environments is rarely linear. It is usually a sequence of partial fixes that only become transformational when the underlying infrastructure is finally consolidated." },
     { label: "Stage 1: Tool-Centric Output", text: "Transformation logic lives where work gets delivered: dashboards, local SQL, spreadsheets, scripts, and workflow tools. The organization is productive, but not cumulative." },
     { label: "Stage 2: Coordinated Fragmentation", text: "Teams begin producing at scale, but shared standards lag behind delivery. Similar logic is rebuilt across functions, and coordination increasingly depends on tribal knowledge." },
     { label: "Stage 3: Platform Consolidation", text: "The organization introduces a more unified data platform, but logic remains distributed. Infrastructure improves faster than transformation design, so operational fragility persists beneath the new architecture." },

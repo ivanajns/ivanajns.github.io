@@ -2,6 +2,7 @@ import type { Project } from "../types/project";
 import project1Src from "../img/project-1.png";
 import project2Src from "../img/project-2.png";
 import project3Src from "../img/project-3.png";
+import strategic2Src from "../img/strategic-2.png";
 
 export const projects: Project[] = [
   {
@@ -29,6 +30,16 @@ export const projects: Project[] = [
     results: "Automated the ingestion and preparation of SAP ERP export data, eliminating manual report preparation and ensuring consistent refresh of accounting reports. Introduced centralized archival storage and automated transformations, preserving historical data while enabling faster and more reliable reporting.",
     image: project1Src.src,
     tags: ["Microsoft Fabric Pipeline", "Python Notebook", "Azure SQL Data Table", "Dataflow Power Query", "Power BI"],
+    featured: true
+  },
+  {
+    id: 4,
+    title: "From Silos to Systems: A Transformation Maturity Curve",
+    description: "Transformation maturity in real enterprise environments is rarely linear. It is usually a sequence of partial fixes that only become transformational when the underlying infrastructure is finally consolidated.",
+    details: "Stage 1: Tool-Centric Output — transformation logic lives where work gets delivered: dashboards, local SQL, spreadsheets, scripts, and workflow tools. The organization is productive, but not cumulative. Stage 2: Coordinated Fragmentation — teams begin producing at scale, but shared standards lag behind delivery, and coordination increasingly depends on tribal knowledge. Stage 3: Platform Consolidation — a more unified data platform is introduced, but logic remains distributed, so operational fragility persists beneath the new architecture. Stage 4: Shared Transformation Layer — repeatable business logic moves upstream into reusable models and modular transformations, making delivery thinner and more consistent. Stage 5: Transformation as Institutional Infrastructure — transformation logic becomes a governed, versioned, documented asset designed to support both analytics and operational consumption at scale.",
+    results: "The decisive transition in data maturity is from scattered transformation logic to shared transformation infrastructure.",
+    image: strategic2Src.src,
+    tags: ["Data Maturity", "Transformation Strategy", "Enterprise Architecture"],
     featured: true
   }
 ];

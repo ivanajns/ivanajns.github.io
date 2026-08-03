@@ -29,7 +29,7 @@ export const projects: Project[] = [
   description: "TThis maturity curve shows how organizations move from fragmented, report-level logic to a governed analytics environment where trusted data is built directly into decision-making. The progression is not just about adopting a modern platform; it is about centralizing business logic, creating reusable architecture, and building enough trust in the data so that teams can spend less time debating numbers and more time acting on them.",
   results: "Organizations that reach the later stages spend less time debating numbers and more time acting on them. Standardized, trusted data leads to faster decisions, better alignment across teams, fewer reporting bottlenecks, and greater confidence that strategic decisions are based on consistent information rather than conflicting metrics.",
     image: strategic2Src.src,
-    tags: ["Analytics Strategy", "Data Maturity", "Enterprise Architecture", "Data Governance", "Decision Intelligence"],
+    tags: ["Analytics Strategy", "Data Maturity", "Enterprise Architecture", "Decision Intelligence"],
     featured: true
   },
 {

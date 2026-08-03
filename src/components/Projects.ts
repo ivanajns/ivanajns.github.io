@@ -25,15 +25,6 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "Analytics Engineering Github",
-    description: "",
-    results: "",
-    image: project3Src.src,
-    tags: ["dbt", "Snowflake Views", "Dimensional Modeling", "Kimball", "SQL", "Data Warehouse", "Transformation Layer", "ELT"],
-    featured: true
-  },
-  {
-    id: 4,
     title: "Analytics Modernization Maturity Curve",
     description: "<p><strong>Stage 1: Fragmented Logic</strong><br>
 Transformation logic lives in dozens of dashboards, scripts, and one-off reports. Every team has its own version of the numbers, so meetings turn into arguments about whose numbers are right instead of what to do next.
@@ -48,6 +39,15 @@ At this point the modernized, reusable, governed data isn't a reporting layer le
     results: "Organizations that reach the later stages spend less time debating numbers and more time acting on them. Standardized, trusted data leads to faster decisions, better alignment across teams, fewer reporting bottlenecks, and greater confidence that strategic decisions are based on consistent information rather than conflicting metrics.",
     image: strategic2Src.src,
     tags: ["Data Maturity", "Transformation Strategy", "Enterprise Architecture"],
+    featured: true
+  },
+{
+    id: 4,
+    title: "Analytics Engineering Github",
+    description: "",
+    results: "",
+    image: project3Src.src,
+    tags: ["dbt", "Snowflake Views", "Dimensional Modeling", "Kimball", "SQL", "Data Warehouse", "Transformation Layer", "ELT"],
     featured: true
   }
 ];

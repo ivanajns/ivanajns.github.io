@@ -16,9 +16,9 @@ export const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Snowflake Migration & Data Impact Agent",
-    description: "I supported a large scale migration of 50+ Power BI and Power Platform solutions from SQL Server to Snowflake across business critical accounting and ERP workflows. During the transition, I refactored SQL logic, rebuilt data connections, and helped resolve authentication and SSO-related issues that would have broken unattended automations in the new environment. To reduce production risk during and after migration, I also designed a dependency-aware data impact analysis agent in Copilot Studio to map relationships between datasets, reports, and downstream automation flows, improving visibility into how changes to upstream tables would affect business processes.",
-    results: "Helped preserve reporting and automation continuity during a high-impact platform migration while improving visibility into upstream and downstream dependencies. The project also exposed how much business logic was duplicated across Power BI reports and automation workflows, which led me consolidating the transformation logic into reusable Snowflake views and establishing a more centralized, maintainable semantic layer for future development.",
+    title: "Snowflake Migration & AI-Assisted Analytics Architecture",
+    description: "I supported a large-scale migration of 50+ Power BI and Power Platform solutions from SQL Server to Snowflake across business-critical accounting and ERP workflows. To cut down on risk and manual rework, I designed a generative AI model that analyzed transformation logic across overlapping Power BI reports, identifying repeated code patterns and recommending which logic belonged upstream as reusable Snowflake views and stored procedures. I also resolved private-key authentication for scheduled jobs that SSO couldn't reliably support, preserving automation continuity through the transition.",
+    results: "The AI-assisted analysis surfaced duplicated transformation logic across dozens of reports and directly informed a new shared transformation layer: reusable Snowflake views and stored procedures that replaced scattered, report-level SQL. This reduced redundant logic, lowered the risk of inconsistent business rules across reports, and gave the team a single governed source of truth for core transformations going forward.",
     image: project2Src.src,
     tags: ["Snowflake", "Copilot Studio AI Agent", "Data Migration", "SQL Refactoring", "Data Lineage", "Impact Analysis"],
     featured: true

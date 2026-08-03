@@ -38,7 +38,7 @@ export const projects: Project[] = [
     description: "",
     results: "",
     image: project3Src.src,
-    tags: ["dbt", "Snowflake Views", "Dimensional Modeling", "Kimball", "SQL", "Data Warehouse", "Transformation Layer", "ELT"],
+    tags: ["Microsoft Fabric", "Medallion Architecture", "Dimensional Modeling", "PySpark", "Delta Lake", "Semantic Modeling", "Power BI"],
     featured: true
   }
 ];

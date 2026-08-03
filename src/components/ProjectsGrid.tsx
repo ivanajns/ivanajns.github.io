@@ -37,7 +37,7 @@ export default function ProjectsGrid({ projects }: Props) {
             return (
               <a
                 key={project.id}
-                // href="https://github.com"
+                // href="https://github.com/ivanajns/fabric-analytics-engineering-solution"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-full text-left bg-gradient-to-br from-blue-50 to-white p-4 rounded-2xl hover:shadow-lg transition-all duration-300 group"

@@ -34,10 +34,18 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    title: "From Silos to Systems: A Transformation Maturity Curve",
-    description: "Transformation maturity in real enterprise environments is rarely linear. It is usually a sequence of partial fixes that only become transformational when the underlying infrastructure is finally consolidated.",
-    details: "Stage 1: Tool-Centric Output — transformation logic lives where work gets delivered: dashboards, local SQL, spreadsheets, scripts, and workflow tools. The organization is productive, but not cumulative. Stage 2: Coordinated Fragmentation — teams begin producing at scale, but shared standards lag behind delivery, and coordination increasingly depends on tribal knowledge. Stage 3: Platform Consolidation — a more unified data platform is introduced, but logic remains distributed, so operational fragility persists beneath the new architecture. Stage 4: Shared Transformation Layer — repeatable business logic moves upstream into reusable models and modular transformations, making delivery thinner and more consistent. Stage 5: Transformation as Institutional Infrastructure — transformation logic becomes a governed, versioned, documented asset designed to support both analytics and operational consumption at scale.",
-    results: "The decisive transition in data maturity is from scattered transformation logic to shared transformation infrastructure.",
+    title: "Analytics Modernization Maturity Curve",
+    description: "<p><strong>Stage 1: Fragmented Logic</strong><br>
+Transformation logic lives in dozens of dashboards, scripts, and one-off reports. Every team has its own version of the numbers, so meetings turn into arguments about whose numbers are right instead of what to do next.
+<p><strong>Stage 2: Modernized Platform, Same Old Habits</strong><br>
+The company migrates to a new warehouse or cleans up the pipeline, but nothing changes for the people making decisions. They still pull numbers from whatever report they've always used, so the upgrade doesn't actually move the needle.
+<p><strong>Stage 3: Reusable Architecture</strong><br>
+Business logic gets moved upstream into shared views and models that every team pulls from. Analysts stop rebuilding the same calculation five different ways and start actually looking at what the data means.
+<p><strong>Stage 4: Numbers People Trust</strong><br>
+Once the logic is centralized and documented, people stop asking where a number came from and start using it to make calls. That trust is the real unlock, not the infrastructure itself.
+<p><strong>Stage 5: Analytics Built Into How Decisions Get Made</strong><br>
+At this point the modernized, reusable, governed data isn't a reporting layer leadership checks after the fact. It's part of how they evaluate performance and set priorities in the room, in real time.",
+    results: "Organizations that reach the later stages spend less time debating numbers and more time acting on them. Standardized, trusted data leads to faster decisions, better alignment across teams, fewer reporting bottlenecks, and greater confidence that strategic decisions are based on consistent information rather than conflicting metrics.",
     image: strategic2Src.src,
     tags: ["Data Maturity", "Transformation Strategy", "Enterprise Architecture"],
     featured: true

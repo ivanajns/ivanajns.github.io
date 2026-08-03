@@ -26,28 +26,7 @@ export const projects: Project[] = [
   {
     id: 3,
   title: "Analytics Modernization Maturity Curve",
-  description: `
-    <p>
-      <strong>Stage 1: Fragmented Logic</strong><br>
-      Transformation logic lives in dozens of dashboards, scripts, and one-off reports. Every team has its own version of the numbers, so meetings turn into arguments about whose numbers are right instead of what to do next.
-    </p>
-    <p>
-      <strong>Stage 2: Modernized Platform, Same Old Habits</strong><br>
-      The company migrates to a new warehouse or cleans up the pipeline, but nothing changes for the people making decisions. They still pull numbers from whatever report they've always used, so the upgrade doesn't actually move the needle.
-    </p>
-    <p>
-      <strong>Stage 3: Reusable Architecture</strong><br>
-      Business logic gets moved upstream into shared views and models that every team pulls from. Analysts stop rebuilding the same calculation five different ways and start actually looking at what the data means.
-    </p>
-    <p>
-      <strong>Stage 4: Numbers People Trust</strong><br>
-      Once the logic is centralized and documented, people stop asking where a number came from and start using it to make calls. That trust is the real unlock, not the infrastructure itself.
-    </p>
-    <p>
-      <strong>Stage 5: Analytics Built Into How Decisions Get Made</strong><br>
-      At this point, the modernized, reusable, governed data isn't a reporting layer leadership checks after the fact. It's part of how they evaluate performance and set priorities in the room, in real time.
-    </p>
-  `,
+  description: "TThis maturity curve shows how organizations move from fragmented, report-level logic to a governed analytics environment where trusted data is built directly into decision-making. The progression is not just about adopting a modern platform; it is about centralizing business logic, creating reusable architecture, and building enough trust in the data so that teams can spend less time debating numbers and more time acting on them.",
   results: "Organizations that reach the later stages spend less time debating numbers and more time acting on them. Standardized, trusted data leads to faster decisions, better alignment across teams, fewer reporting bottlenecks, and greater confidence that strategic decisions are based on consistent information rather than conflicting metrics.",
     image: strategic2Src.src,
     tags: ["Data Maturity", "Transformation Strategy", "Enterprise Architecture"],

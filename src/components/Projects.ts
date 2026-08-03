@@ -11,7 +11,7 @@ export const projects: Project[] = [
     description: "I supported a large-scale migration of 50+ Power BI and Power Platform solutions from SQL Server to Snowflake across business-critical accounting and ERP workflows. To cut down on risk and manual rework, I designed a generative AI model that analyzed transformation logic across overlapping Power BI reports, identifying repeated code patterns and recommending which logic belonged upstream as reusable Snowflake views and stored procedures. I also resolved private-key authentication for scheduled jobs that SSO couldn't reliably support, preserving automation continuity through the transition.",
     results: "The AI-assisted analysis surfaced duplicated transformation logic across dozens of reports and directly informed a new shared transformation layer: reusable Snowflake views and stored procedures that replaced scattered, report-level SQL. This reduced redundant logic, lowered the risk of inconsistent business rules across reports, and gave the team a single governed source of truth for core transformations going forward.",
     image: project2Src.src,
-    tags: ["Snowflake", "Generative AI", "SQL Refactoring", "Inventory Audit", "Transformation Layer"],
+    tags: ["Snowflake", "Generative AI", "SQL Refactoring", "Power BI", "Inventory Audit", "Transformation Layer"],
     featured: true
   },
   {

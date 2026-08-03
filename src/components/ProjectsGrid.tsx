@@ -33,7 +33,7 @@ export default function ProjectsGrid({ projects }: Props) {
       {/* Card grid */}
       <div className="grid gap-4">
         {projects.map((project) => {
-          if (project.id === 1) {
+          if (project.id === 4) {
             return (
               <a
                 key={project.id}

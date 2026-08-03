@@ -25,8 +25,8 @@ export const projects: Project[] = [
   },
   {
     id: 3,
-    title: "End-to-end Cloud Finance Analytics Dashboard",
-    description: "I designed and implemented a full-stack analytics workflow that processes excel SAP ERP exports for recurring accounting reports where direct system access was restricted. A Fabric Pipeline triggers a Python notebook that processes the data and stores it in Azure SQL data tables to preserve historical records that would otherwise be overwritten. A Dataflow power query then standardizes ingestion and transformation into analytics-ready datasets for dashboards and excel reporting. I designed the architecture to separate data ingestion, archival storage, and reporting preparation, allowing Power BI to refresh automatically as new data becomes available.",
+    title: "Finance Operations Automation & Self-Service Analytics App",
+    description: "The finance team’s fiscal close process required up to eight hours each month to reconcile transactional balances between the SAP ERP and the payables system. I replaced the manual workflow with an automated Python and database solution that standardizes the source data, applies the required reconciliation logic, and preserves historical transactions for analysis. I then developed a self-service analytics application that enables finance leaders to investigate variances, make controlled updates, and export results independently, with all changes and approvals captured in an audit trail.",
     results: "Automated the ingestion and preparation of SAP ERP export data, eliminating manual report preparation and ensuring consistent refresh of accounting reports. Introduced centralized archival storage and automated transformations, preserving historical data while enabling faster and more reliable reporting.",
     image: project1Src.src,
     tags: ["Microsoft Fabric Pipeline", "Python Notebook", "Azure SQL Data Table", "Dataflow Power Query", "Power BI"],

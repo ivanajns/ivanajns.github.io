@@ -1,7 +1,5 @@
 # Apple-Style Portfolio Template
 
-[English](README.md) | [简体中文](README.zh-CN.md)
-
 A modern, minimalist portfolio template built with Astro and designed with Apple's design aesthetic in mind.
 
 live demo: [apple-style-portfolio](https://apple-style-portfolio.larryxue.dev/)

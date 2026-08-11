@@ -27,7 +27,7 @@ export const projects: Project[] = [
     id: 3,
   title: "Analytics Modernization Maturity Curve",
   description: "Presented this maturity curve to senior leadership to show how organizations move from fragmented, report-level logic to a governed analytics environment where trusted data is built directly into decision-making. The progression is not just about adopting a modern platform; it is about centralizing business logic, creating reusable architecture, and building enough trust in the data so that leaders can spend less time debating numbers and more time acting on them. It is an investment that will pay dividends as organizations grow and scale.",
-  results: "Created a roadmap for senior leadership to see what analytics modernization looks like and connected technology investments to business outcomes. Standardized, trusted data leads to faster decisions, better alignment across teams, fewer reporting bottlenecks, and greater confidence that strategic decisions are based on consistent information rather than conflicting metrics.",
+  results: "Created a roadmap for senior leadership to see what analytics modernization looks like and connected technology investments to business outcomes. Standardized, trusted data leads to faster decisions, better alignment across teams, fewer reporting bottlenecks, and greater confidence that strategic decisions are based on consistent information.",
     image: strategic2Src.src,
     tags: ["Analytics Strategy", "Data Maturity", "Exec Presentations", "Enterprise Architecture", "Decision Intelligence"],
     featured: true

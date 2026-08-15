@@ -38,7 +38,7 @@ export const projects: Project[] = [
     description: "",
     results: "",
     image: project3Src.src,
-    tags: ["Microsoft Fabric", "Medallion Architecture", "PySpark", "Dimensional Modeling", "Semantic Modeling", "Power BI"],
+    tags: ["Microsoft Fabric", "Medallion Architecture", "PySpark", "Dimensional Data Modeling", "Semantic Modeling", "Power BI"],
     featured: true
   }
 ];

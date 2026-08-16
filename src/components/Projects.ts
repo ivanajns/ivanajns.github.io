@@ -38,7 +38,7 @@ export const projects: Project[] = [
     description: "",
     results: "",
     image: project3Src.src,
-    tags: ["Unified Analytics Platform", "Semantic Modeling", "Dimensional Data Modeling", "Data Quality & Delivery"],
+    tags: ["Unified Analytics Platform", "Semantic Modeling", "Data Quality", "Dimensional Data Modeling", "Metrics Delivery"],
     featured: true
   }
 ];

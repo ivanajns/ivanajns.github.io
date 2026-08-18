@@ -29,7 +29,7 @@ export const projects: Project[] = [
   description: "Presented this maturity curve to senior leadership to show the value added as organizations move from fragmented, report-level logic to a governed analytics environment where trusted data is built directly into decision-making. The progression is not just about upgrading the technology with a modern platform; it is about centralizing business logic, creating reusable architecture, and building enough trust in the data so that leaders can spend less time debating numbers and more time acting on them.",
   results: "Created a roadmap for senior leadership to see what analytics modernization looks like in current state vs future state and connected technology investments to business outcomes. Standardized, trusted data leads to faster decisions, better alignment across teams, fewer reporting bottlenecks, and greater confidence that strategic decisions are based on consistent information.",
     image: strategic2Src.src,
-    tags: ["Analytics Strategy", "Data Maturity", "Exec Presentations", "Architecture Modernization", "Decision Intelligence"],
+    tags: ["Analytics Strategy", "Data Maturity", "Exec Presentations", "Enterprise Architecture Modernization", "Decision Intelligence"],
     featured: true
   },
 {

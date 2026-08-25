@@ -7,11 +7,11 @@ import strategic2Src from "../img/strategic-2.png";
 export const projects: Project[] = [
   {
     id: 1,
-    title: "Snowflake Migration & Reusable Analytics Architecture",
+    title: "Snowflake Migration & Shared Analytics Architecture",
     description: "I supported a large-scale migration of 50+ Power BI and Power Platform solutions from SQL Server to Snowflake across business-critical accounting and ERP workflows. I took this as an opportunity to centralize and I designed a generative AI model that analyzed transformation logic across overlapping Power BI reports, identifying repeated code patterns and recommending which logic belonged upstream as reusable Snowflake views and stored procedures. Now 15 downstream revenue reports use consistent and standardized business logic that the finance teams can better trust. I also resolved private-key authentication for scheduled jobs that SSO couldn't reliably support, preserving automation continuity through the transition.",
     results: "The AI-assisted analysis surfaced duplicated transformation logic across reports and directly informed a new shared transformation layer: reusable Snowflake views and stored procedures that replaced scattered, report-level SQL. This reduced redundant logic, lowered the risk of inconsistent business rules across reports, and gave the team a single governed source of truth for core transformations going forward.",
     image: project2Src.src,
-    tags: ["Reusable Architecture", "Generative AI", "SQL Refactoring", "Inventory Mgmt", "Cloud Platform", "Data Standardization"],
+    tags: ["Reusable Datasets", "Generative AI", "SQL Refactoring", "Inventory Mgmt", "Cloud Platform", "Data Standardization"],
     featured: true
   },
   {
@@ -20,7 +20,7 @@ export const projects: Project[] = [
     description: "The finance team’s fiscal close process required up to eight hours each month to reconcile transactional balances between the SAP ERP and the payables system. I replaced the manual workflow with an automated Python and database solution that standardizes the source data, applies the required reconciliation logic, and preserves historical transactions for analysis. I then developed a self-service analytics application that enables finance leaders to investigate variances, make controlled updates, and export results independently, with all changes and approvals captured in an audit trail.",
     results: "The process dropped from up to eight hours of manual reconciliation each close to an automated self-service workflow. Finance leaders can now review, filter, and export their own analysis directly from the app, while centralized logic applies the same business rules each cycle. Every edit and approval is captured in the audit trail, reducing manual work and improving control.",
     image: project1Src.src,
-    tags: ["Self-Service Products", "Python Application", "Audit Trail", "SQL Querying", "ETL Pipeline", "Data Governance"],
+    tags: ["Self-Service Data Products", "Python Application", "Audit Trail", "SQL Querying", "ETL Pipeline", "Data Governance"],
     featured: true
   },
   {

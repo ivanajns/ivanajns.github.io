@@ -32,7 +32,7 @@ export const projects: Project[] = [
     tags: ["Data Asset", "Audit Trail", "Python GUI App", "Self-Service Data Product", "Automated ETL Pipeline"],
     featured: true
   },
-{
+  {
     id: 4,
     title: "Microsoft Fabric Analytics Engineering Solution in Github",
     description: "",

@@ -29,7 +29,7 @@ export const projects: Project[] = [
     description: "The finance team’s fiscal close process required up to eight hours each month to reconcile transactional balances between the SAP ERP and the payables system. Partnering directly with finance stakeholders, I gathered requirementa to design and develop a solution end-to-end to replace the manual workflow. The automated Python and database solution that standardizes the source data, applies the required reconciliation logic, and preserves historical transactions for analysis. I then developed a self-service analytics application that enables finance leaders to investigate variances, make controlled updates, and export results independently for timely decision-making, with all changes and approvals captured in an audit trail.",
     results: "The process dropped from up to eight hours of manual reconciliation each close to an automated self-service workflow. Finance leaders can now review, filter, and export their own analysis directly from the app, while centralized logic applies the same business rules each cycle. Every edit and approval is captured in the audit trail, reducing manual work and improving control.",
     image: project1Src.src,
-    tags: ["Data Pipeline", "Process Transformation", "Python API App", "Self-Service Data Product", "End-To-End Ownership"],
+    tags: ["Data Pipeline", "Self-Service Data Product", "Python API App", "Process Transformation", "End-To-End Ownership"],
     featured: true
   },
   {

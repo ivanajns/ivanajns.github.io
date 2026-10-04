@@ -11,7 +11,7 @@ export const projects: Project[] = [
     description: "Presented this maturity curve to senior leadership to show the value added as organizations move from fragmented, report-level logic to a governed analytics environment where trusted data is built directly into decision-making. The progression is not just about upgrading the technology with a modern platform; it is about centralizing business logic, creating reusable architecture, and building enough trust in the data so that leaders can spend less time debating numbers and more time acting on them.",
     results: "Created a roadmap for senior leadership to see what analytics modernization looks like in current state vs future state and connected technology investments to business outcomes. Standardized, trusted data leads to faster decisions, better alignment across teams, fewer reporting bottlenecks, and greater confidence that strategic decisions are based on consistent information.",
     image: strategic2Src.src,
-    tags: ["Data Strategy", "Practitioner's Insight", "Analytics Modernization"],
+    tags: ["Data Strategy", "Decision Intelligence", "Analytics Modernization"],
     featured: true
   },
   {
@@ -20,7 +20,7 @@ export const projects: Project[] = [
     description: "I supported a large-scale migration of 50+ Power BI and Power Platform solutions from SQL Server to Snowflake across business-critical accounting and ERP workflows. I took this as an opportunity to centralize and use GenAI to analyze transformation logic across overlapping Power BI reports, identifying repeated code patterns and recommending which logic belonged upstream as reusable Snowflake views and stored procedures. Now 15 downstream revenue reports use consistent and standardized business logic that the finance teams can better trust for their measures and metrics for financial analysis.",
     results: "The AI-assisted analysis surfaced duplicated transformation logic across reports and directly informed a new shared transformation layer: reusable Snowflake views and stored procedures that replaced scattered, report-level SQL. This reduced redundant logic, lowered the risk of inconsistent business rules across reports, and gave the team a single governed source of truth for core transformations going forward.",
     image: project2Src.src,
-    tags: ["Shareable Datasets", "Cloud Platform Migration", "Metric Standardization"],
+    tags: ["Shareable Datasets", "Metric Standardization", "Cloud Platform Migration"],
     featured: true
   },
   {
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     description: "",
     results: "",
     image: project3Src.src,
-    tags: ["Data Architecture", "Dimensional Data Modeling", "Semantic Modeling"],
+    tags: ["Data Architecture", "Semantic Modeling", "Dimensional Data Modeling"],
     featured: true
   }
 ];

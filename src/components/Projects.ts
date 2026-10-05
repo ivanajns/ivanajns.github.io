@@ -38,7 +38,7 @@ export const projects: Project[] = [
     description: "",
     results: "",
     image: project3Src.src,
-    tags: ["Data Architecture", "Semantic Modeling", "Dimensional Data Modeling"],
+    tags: ["Unified data Architecture", "Semantic Modeling", "Dimensional Data Modeling"],
     featured: true
   }
 ];

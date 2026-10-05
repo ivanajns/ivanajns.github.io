@@ -38,7 +38,7 @@ export const projects: Project[] = [
     description: "",
     results: "",
     image: project3Src.src,
-    tags: ["Unified Data Platform", "Medallion Architecture", "Dimensional Data Modeling"],
+    tags: ["Unified Data Platform", "Medallion Data Architecture", "Dimensional Data Modeling"],
     featured: true
   }
 ];

@@ -9,7 +9,7 @@ export const projects: Project[] = [
     id: 1,
     title: "From Fragmented Metrics to Decision Infrastructure: An Analytics Maturity Curve",
     description: "Presented this maturity curve to senior leadership to show the value added as organizations move from fragmented, report-level logic to a governed analytics environment where trusted data is built directly into decision-making. The progression is not just about upgrading the technology with a modern platform; it is about centralizing business logic, creating reusable architecture, and building enough trust in the data so that leaders can spend less time debating numbers and more time acting on them.",
-    results: "This curve shows what analytics modernization looks like as it progresses through the main stages and connects the data product strategy of reusable architecture back to business outcomes. Standardized, trusted data leads to faster decisions, better alignment across teams, fewer reporting bottlenecks, and greater confidence that strategic decisions are based on consistent information.",
+    results: "This curve shows what analytics modernization looks like as it progresses through the main stages and connects the analytics product strategy of reusable architecture back to business outcomes. Standardized, trusted data leads to faster decisions, better alignment across teams, fewer reporting bottlenecks, and greater confidence that strategic decisions are based on consistent information.",
     image: strategic2Src.src,
     tags: ["Data Product Strategy", "Analytics Modernization"],
     featured: true
@@ -29,7 +29,7 @@ export const projects: Project[] = [
     description: "The finance team’s fiscal close process required up to eight hours each month to reconcile transactional balances between the SAP ERP and the payables system. Partnering directly with finance stakeholders, I gathered requirements to design and develop an automated solution from end to end to replace the manual process. The Python data pipeline standardizes the source data, applies the required reconciliation logic, and preserves historical transactions for analysis. The Python API application enables finance leaders to serve themselves to get the data they need to investigate variances, make controlled updates, and export results independently for timely financial analysis, with all changes and approvals captured in an audit trail.",
     results: "The process dropped from up to eight hours of manual reconciliation each close to an automated self-service workflow. Finance leaders can now review, filter, and export their own analysis directly from the app, while centralized logic applies the same business rules each cycle. Every edit and approval is captured in the audit trail, reducing manual work and improving control.",
     image: project1Src.src,
-    tags: ["Reusable Data Product", "End-To-End Data Solution"],
+    tags: ["Reusable Analytics Product", "End-To-End Analytics Solution"],
     featured: true
   },
   {
@@ -38,7 +38,7 @@ export const projects: Project[] = [
     description: "",
     results: "",
     image: project3Src.src,
-    tags: ["Unified Data Platform", "Data Architecture Strategy"],
+    tags: ["Unified Analytics Platform", "Analytics Architecture"],
     featured: true
   }
 ];

@@ -34,7 +34,7 @@ export const projects: Project[] = [
   },
   {
     id: 4,
-    title: "Microsoft Fabric End-to-End Sales Revenue Analytics Engineering Demo",
+    title: "Microsoft Fabric End-to-End Sales Analytics Engineering Demo",
     description: "",
     results: "",
     image: project3Src.src,

@@ -8,7 +8,7 @@ export const projects: Project[] = [
   {
     id: 1,
     title: "From Fragmented Metrics to Decision Infrastructure: An Analytics Maturity Curve",
-    description: "Presented this maturity curve to senior leadership to show the value added as organizations move from fragmented, report-level logic to a governed analytics environment where trusted data is built directly into decision-making. The progression is not just about upgrading the technology with a modern platform; it is about centralizing business logic, creating reusable architecture, and building enough trust in the data so that leaders can spend less time debating numbers and more time acting on them.",
+    description: "Presented this analytics maturity curve to senior leadership to show the value added as organizations move from fragmented, report-level logic to a governed analytics environment where trusted data is built directly into decision-making. The progression is not just about upgrading the technology with a modern platform; it is about centralizing business logic, creating reusable architecture, and building enough trust in the data so that leaders can spend less time debating numbers and more time acting on them.",
     results: "This curve shows what analytics modernization looks like as it progresses through the main stages and connects the analytics product strategy of reusable architecture back to business outcomes. Standardized, trusted data leads to faster decisions, better alignment across teams, fewer reporting bottlenecks, and greater confidence that strategic decisions are based on consistent information.",
     image: strategic2Src.src,
     tags: ["Analytics Product Strategy", "Analytics Modernization"],

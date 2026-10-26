@@ -38,7 +38,7 @@ export const projects: Project[] = [
     description: "",
     results: "",
     image: project3Src.src,
-    tags: ["Unified Platform", "Microsoft Fabric Medallion Architecture"],
+    tags: ["Unified Analytics Platform", "Microsoft Fabric Architecture"],
     featured: true
   }
 ];

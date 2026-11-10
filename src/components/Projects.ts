@@ -38,7 +38,7 @@ export const projects: Project[] = [
     description: "",
     results: "",
     image: project3Src.src,
-    tags: ["Enterprise Analytics Platform", "Microsoft Fabric Architecture"],
+    tags: ["Enterprise Analytics Architecture", "Microsoft Fabric Platform"],
     featured: true
   }
 ];
